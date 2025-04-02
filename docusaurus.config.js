@@ -1,0 +1,75 @@
+import { themes as prismThemes } from "prism-react-renderer";
+
+// With JSDoc @type annotations, IDEs can provide config autocompletion
+/** @type {import('@docusaurus/types').Config} */
+export default {
+  title: "Elite Quiz Documentation",
+  tagline: "Documentation for Elite Quiz Web App",
+  url: "https://your-docusaurus-site.com",
+  baseUrl: "/",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "elite-quiz", // Usually your GitHub org/user name.
+  projectName: "elite-quiz-docs", // Usually your repo name.
+
+  presets: [
+    [
+      "@docusaurus/preset-classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          sidebarPath: require.resolve("./sidebars.js"),
+          routeBasePath: "docs",
+        },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      }),
+    ],
+  ],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        title: "Elite Quiz Docs",
+        logo: {
+          alt: "Elite Quiz Logo",
+          src: "img/logo.svg",
+        },
+        items: [
+          {
+            type: "doc",
+            docId: "introduction",
+            position: "left",
+            label: "Documentation",
+          },
+          {
+            href: "https://wrteam.in/",
+            label: "WRTeam",
+            position: "right",
+          },
+        ],
+      },
+      footer: {
+        style: "dark",
+        links: [],
+        copyright: `Copyright © ${new Date().getFullYear()} WRTeam.`,
+      },
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
+      colorMode: {
+        defaultMode: "light",
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+    }),
+};
