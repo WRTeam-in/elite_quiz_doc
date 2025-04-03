@@ -13,6 +13,9 @@ export default {
   organizationName: "elite-quiz", // Usually your GitHub org/user name.
   projectName: "elite-quiz-docs", // Usually your repo name.
 
+  // Add local search plugin with a unique ID to avoid conflicts
+  plugins: [require.resolve("@easyops-cn/docusaurus-search-local")],
+
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -23,7 +26,7 @@ export default {
           routeBasePath: "docs",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -32,6 +35,7 @@ export default {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Remove any Algolia reference if it exists
       navbar: {
         title: "Elite Quiz Docs",
         logo: {
@@ -48,6 +52,10 @@ export default {
           {
             href: "https://wrteam.in/",
             label: "WRTeam",
+            position: "right",
+          },
+          {
+            type: "search",
             position: "right",
           },
         ],

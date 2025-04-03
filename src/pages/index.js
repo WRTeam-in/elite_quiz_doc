@@ -9,9 +9,9 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+      <div className="container hero-content">
+        <h1 className={styles.hero__title}>{siteConfig.title}</h1>
+        <p className={styles.hero__subtitle}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -74,6 +74,19 @@ export default function Home() {
           }}
         >
           <QuickLinks />
+          {/* Use regular class names for the animation elements */}
+          <ul className="circlesRound">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </main>
       </div>
     </Layout>
