@@ -101,11 +101,6 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
-[data-theme="dark"] .quickLinkCard:hover {
-  background-color: var(--ifm-color-primary-darkest);
-  border-color: var(--ifm-color-primary);
-}
-
 @media screen and (max-width: 768px) {
   .quickLinksGrid {
     grid-template-columns: 1fr;
