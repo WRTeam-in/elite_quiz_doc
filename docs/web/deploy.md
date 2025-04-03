@@ -76,11 +76,3 @@ If you're using a custom domain:
 2. Configure your DNS settings to point to your hosting provider
 3. Add SSL certificate for HTTPS (many hosting providers offer this automatically)
 
-## Performance Optimization
-
-For optimal performance, consider:
-
-- Enabling GZIP compression on your server
-- Setting up proper cache headers
-- Using a Content Delivery Network (CDN)
-- Implementing lazy loading for images and components
