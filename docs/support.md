@@ -53,4 +53,4 @@ Yes, the app is built with standard web technologies. If you need custom feature
 
 ### How do I get my purchase code?
 
-Your purchase code is available in your Envato purchase history. If you can't find it, please contact Envato support.
+Your purchase code is available in your Envato purchase history. If you can't find it, please check our [detailed guide on finding your purchase code](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code) or contact Envato support.
