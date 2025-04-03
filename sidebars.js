@@ -23,10 +23,8 @@ export default {
         "admin/overview",
         "admin/installation",
         "admin/configuration",
-        "admin/user-management",
-        "admin/quiz-management",
         "admin/settings",
-        "admin/api-integration",
+        "admin/system-language",
       ],
     },
     {

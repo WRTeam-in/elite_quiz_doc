@@ -11,14 +11,12 @@ After installing the Elite Quiz Admin Panel, you'll need to configure it to matc
 ### General Settings
 
 1. Log in to your Admin Panel
-2. Navigate to **Settings > General Settings**
+2. Navigate to **Profile**
 3. Configure the following settings:
    - Application Name
-   - Admin Email
-   - Default Language
-   - Time Zone
-   - Date Format
-   - Currency Settings
+   - Logo
+   - Robot Image
+   - Admin Panel Login Background Image
 4. Click **Save Changes** to apply your settings
 
 ## Firebase Configuration
@@ -58,97 +56,6 @@ After installing the Elite Quiz Admin Panel, you'll need to configure it to matc
 Configure authentication methods for your application:
 
 ![Authentication Settings](/img/panel/authentication_settings.webp)
-
-## Email Configuration
-
-### Setting Up Email Services
-
-1. Navigate to **Settings > Email Settings**
-2. Configure your SMTP settings:
-   - SMTP Host
-   - SMTP Port
-   - SMTP Username
-   - SMTP Password
-   - Encryption Type (TLS/SSL)
-   - From Email Address
-   - From Name
-3. Test your email configuration by clicking **Send Test Email**
-4. Click **Save Email Settings**
-
-## Payment Gateway Configuration
-
-### Setting Up Payment Methods
-
-1. Navigate to **Settings > Payment Settings**
-2. Enable or disable payment gateways:
-   - In-App Purchases (Google/Apple)
-   - PayPal
-   - Stripe
-   - Razorpay
-   - Other supported methods
-3. For each enabled gateway, provide the required API credentials
-4. Configure pricing options and subscription plans
-5. Click **Save Payment Settings**
-
-## Coin Settings
-
-### Configuring Virtual Currency
-
-1. Navigate to **Settings > Coin Settings**
-2. Configure the following options:
-   - Enable/Disable Coin System
-   - Coin Packages and Pricing
-   - Coin Rewards for Activities
-   - Coin Usage Options
-3. Click **Save Coin Settings**
-
-## API Configuration
-
-### Setting Up API Access
-
-1. Navigate to **Settings > API Settings**
-2. Configure API settings:
-   - Enable/Disable API Access
-   - Generate API Keys
-   - Set API Rate Limits
-   - Configure API Permissions
-3. Click **Save API Settings**
-
-## Social Media Integration
-
-### Configuring Social Media Links
-
-1. Navigate to **Settings > Social Media Settings**
-2. Add your social media links:
-   - Facebook
-   - Twitter
-   - Instagram
-   - YouTube
-   - Other platforms
-3. Configure social sharing options
-4. Click **Save Social Media Settings**
-
-## Notification Settings
-
-### Setting Up User Notifications
-
-1. Navigate to **Settings > Notification Settings**
-2. Configure the following options:
-   - Push Notification Settings
-   - Email Notification Templates
-   - In-App Notification Settings
-   - Notification Frequency
-3. Click **Save Notification Settings**
-
-## Advanced Configuration
-
-### Custom CSS and JavaScript
-
-1. Navigate to **Settings > Advanced Settings**
-2. Add custom CSS and JavaScript code to customize your application's appearance and behavior
-3. Configure caching and performance settings
-4. Set security options and access restrictions
-5. Click **Save Advanced Settings**
 
 ## Configuration Files
 
