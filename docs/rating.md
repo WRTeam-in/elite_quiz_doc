@@ -10,7 +10,7 @@ Your feedback is incredibly valuable to us! It helps us improve Elite Quiz and d
 
 If you're enjoying Elite Quiz, please take a moment to rate it on Envato. Your positive ratings help others discover our product and support our continued development.
 
-[Rate Elite Quiz on Envato ⭐](https://codecanyon.net/item/elite-quiz-web-firebase-flutter-quiz-app-with-admin-panel/reviews/41746600)
+[Rate Elite Quiz on Envato ⭐](https://codecanyon.net/downloads)
 
 ## Submit Feedback
 
