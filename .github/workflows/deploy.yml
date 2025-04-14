@@ -24,8 +24,13 @@ jobs:
       - name: Build Docusaurus
         run: npm run build
 
+      - name: Configure Git Identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Deploy to GH Pages
         env:
-          GIT_USER: github-actions
+          GIT_USER: github-actions[bot]
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
