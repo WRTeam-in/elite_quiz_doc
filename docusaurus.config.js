@@ -4,14 +4,14 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 export default {
   title: "Elite Quiz Documentation",
-  tagline: "Documentation for Elite Quiz Web App",
-  url: "https://your-docusaurus-site.com",
-  baseUrl: "/",
+  tagline: "Documentation for Elite Quiz Web & App",
+  url: "https://wrteam-in.github.io",
+  baseUrl: "/elite_quiz_doc",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "elite-quiz", // Usually your GitHub org/user name.
-  projectName: "elite-quiz-docs", // Usually your repo name.
+  organizationName: "WRTeam-in", // Usually your GitHub org/user name.
+  projectName: "elite_quiz_doc", // Usually your repo name.
 
   // Add local search plugin with a unique ID to avoid conflicts
   plugins: [require.resolve("@easyops-cn/docusaurus-search-local")],
