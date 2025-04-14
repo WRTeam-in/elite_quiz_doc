@@ -1,38 +1,39 @@
-name: Deploy Docusaurus to GH Pages
+name: Deploy Docusaurus Site
 
 on:
   push:
     branches:
       - main
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-
-      - name: Setup Node
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build Docusaurus
+          node-version: '18'
+          cache: npm
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build website
         run: npm run build
-
-      - name: Configure Git Identity
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Deploy to GH Pages
-        env:
-          GIT_USER: github-actions[bot]
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run deploy
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
