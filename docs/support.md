@@ -10,11 +10,14 @@ We are here to help you with any issues you might encounter with Elite Quiz. Our
 
 ### Admin Panel Support
 
-Hemal Gondaliya for Admin Panel Support on [Skype](https://join.skype.com/invite/soW6Q7dbqAWM)
+Hemal Gondaliya for Admin Panel Support on [Teams](https://teams.live.com/l/invite/FEAPvh1MHf8NYV3uAE)
 
 ### Web Support
 
-Jaydip Sodha for Web Support on [Skype](https://teams.live.com/l/invite/FEAwXxMcrb86u2BHwE)
+Jaydip Sodha for Web Support on [Teams](https://teams.live.com/l/invite/FEAwXxMcrb86u2BHwE)
+
+### App Support
+Jay Parmar for App Support on [Teams](https://teams.live.com/l/invite/FEAJ7VEK0EAhWzZTQE)
 
 ### Email Support
 
