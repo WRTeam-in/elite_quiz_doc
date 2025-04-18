@@ -1,8 +1,16 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-# API URL Configuration
+# Web Setup Overview
+
+### 1. Extract the Project Files
+
+Unzip the downloaded code package. This will create an "Elite Quiz - Web Code" folder.
+
+### 2. Open the Project
+
+Launch Visual Studio Code (or your preferred code editor) and open the project folder.
 
 ## Where to Set API URL (Admin)
 

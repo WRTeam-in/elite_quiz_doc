@@ -1,22 +1,25 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
 ---
 
-# Application Customization
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Web Customization
 
 Elite Quiz allows for extensive customization of the user interface and branding elements.
 
-## Changing Application Name
+## Changing Name
 
-To change the application name:
+To change the name:
 
 1. Go to Admin Panel > Profile and change the value of **appName**
 
 ![Change App Name](../../static/img/web/appname.png)
 
-## Changing Application Logo
+## Changing Logo
 
-To change logo, favicon, Firebase, footer data, quizplay images, etc:
+**To change logo, favicon, Firebase, footer data, quizplay images, etc:**
 
 1. Go to Admin Panel -> Web Settings -> Settings
 
@@ -90,7 +93,25 @@ To set the Domain URL:
 To configure the sitemap for better SEO:
 
 1. First set domain web url in .env file
-2. Second open terminal and run command: `npm run dev`
+2. Second open terminal and run command:
+
+   <Tabs>
+   <TabItem value="npm" label="npm" default>
+
+   ```bash
+   npm run dev
+   ```
+
+   </TabItem>
+   <TabItem value="bun" label="bun">
+
+   ```bash
+   bun run dev
+   ```
+
+   </TabItem>
+   </Tabs>
+
 3. Go to public -> sitemap.xml
 
 ![Sitemap](../../static/img/web/sitemap.png)
@@ -137,11 +158,31 @@ To add Google AdSense to your application:
 ![First Verify](../../static/img/web/first_verify.png)
 ![Script HTML](../../static/img/web/scripthtml.png)
 
-5. After adding the script, run the command for build folder: `npm run export` and upload to your server
+5. After adding the script, run the command for build folder:
+
+   <Tabs>
+   <TabItem value="npm" label="npm" default>
+
+   ```bash
+   npm run export
+   ```
+
+   </TabItem>
+   <TabItem value="bun" label="bun">
+
+   ```bash
+   bun run export
+   ```
+
+   </TabItem>
+   </Tabs>
+
+   ...and upload to your server
+
 6. After uploading, click on verify button in Google AdSense
 
 ![Verify](../../static/img/web/verify.png)
 
-7. If it says "Getting ready…," your account is still under review and your site will not display ads until it has been approved
+7. If it says **"Getting ready…,"** your account is still under review and your site will not display ads until it has been approved
 
 ![Under Review](../../static/img/web/under_re.png)

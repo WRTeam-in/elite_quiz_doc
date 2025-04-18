@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # Cloud Firestore Integration
@@ -34,21 +34,15 @@ For production environments, you should set up proper security rules:
 
 ![Change Security Rules](../../static/img/web/addFirestore4.jpg)
 
-Here's a basic example of security rules for Elite Quiz:
+Here's a security rules for Elite Quiz:
 
 ```
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-    match /quizzes/{quizId} {
-      allow read: if request.auth != null;
-    }
-    match /leaderboards/{document=**} {
-      allow read: if request.auth != null;
-      allow write: if false;
+    match /{document=**} {
+      
+      allow read, write: if request.auth.uid != null;
     }
   }
 }

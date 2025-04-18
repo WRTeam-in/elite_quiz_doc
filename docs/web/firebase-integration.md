@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Firebase Integration
@@ -7,6 +7,21 @@ sidebar_position: 5
 :::note
 If you already have purchased the App version of Elite Quiz and already created a firebase project, then you can skip the first step.
 :::
+
+## Installation Video Tutorial
+
+To help you get started quickly, we have created a video tutorial that guides you through the installation and setup process:
+
+   <iframe 
+   width="100%" 
+   height="500" 
+   style={{ borderRadius: '10px' }}
+   src="https://www.youtube.com/embed/adrnST-IrgU" 
+   title="Firebase Configuration Video Tutorial" 
+   frameborder="0" 
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+   allowfullscreen>
+   </iframe>
 
 ## How to Configure Firebase
 

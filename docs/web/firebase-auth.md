@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
 ---
 
 # Firebase Authentication
@@ -18,7 +18,7 @@ Authentication Methods should be enabled in both Panel and the firebase to work 
 2. Click on Authentication menu and go to sign-in method
 3. Enable all the authentication methods shown in the image below:
 
-![Add Firebase Auth](../../static/img/web/addFirebaseAuth.png)
+   ![Add Firebase Auth](../../static/img/web/addFirebaseAuth.png)
 
 4. After that add your domain name without https:// OR http://
    e.g **elitequiz.wrteam.in**
@@ -35,8 +35,6 @@ Elite Quiz supports multiple authentication methods:
 
 - Email/Password
 - Google Sign-In
-- Facebook Login
-- Apple ID
 - Phone Number
 
 ## Troubleshooting Authentication Issues

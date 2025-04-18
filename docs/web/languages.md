@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 8
 ---
 
 # Managing Languages
@@ -20,7 +20,7 @@ To make a language the default, you can edit the language. When a user opens the
 
 To manage and add system translations, you can go to System Languages and select the web and click on eye icon:
 
-   ![Admin Language Lables of Web](../../static/img/web/edit-language-labels.webp)
+![Admin Language Lables of Web](../../static/img/web/edit-language-labels.webp)
 
 ## Manage Quiz Language
 
@@ -33,7 +33,6 @@ Quiz Language refers to the language of the questions and quiz content, not the 
 2. Then you can Add/Manage quiz languages from the Languages Section. Skip this step if language mode is disabled.
 
    ![Manage Quiz Languages](../../static/img/panel/manage_quiz_languages.webp)
-
 
 ## RTL Support
 

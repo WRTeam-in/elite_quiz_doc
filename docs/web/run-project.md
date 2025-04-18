@@ -1,56 +1,70 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Running the Project
 
 ## Step-by-Step Process
 
-1. Unzip the downloaded code. After unzipping you will have Elite Quiz - Web Code folder.
-   Open it in Visual Studio Code.
+1. Open VS Code terminal by typing **CTRL+J** in Windows/Linux, and for MacOS **CMD+J** and execute the install command:
 
-2. Open VS Code terminal by typing **CTRL+J** in Windows/Linux, and for MacOS **CMD+J** and execute the command:
+   <Tabs>
+   <TabItem value="npm" label="npm" default>
 
    ```bash
    npm i
    ```
 
+   </TabItem>
+   <TabItem value="bun" label="bun">
+
+   ```bash
+   bun install
+   ```
+
+   </TabItem>
+   </Tabs>
+
    This will take some time to download the necessary packages, so wait for a few minutes.
 
-3. After `npm i` finishes, run this command:
+2. After the installation finishes, run the development command:
+   <Tabs>
+   <TabItem value="npm" label="npm" default>
+
    ```bash
    npm run dev
    ```
-   This command will start the development mode. Check if everything is working fine, then you're good to go ahead.
 
-## Available Commands
+   </TabItem>
+   <TabItem value="bun" label="bun">
 
-Elite Quiz provides several NPM scripts that you can use:
+   ```bash
+   bun run dev
+   ```
 
-| Command          | Description                            |
-| ---------------- | -------------------------------------- |
-| `npm run dev`    | Starts the development server          |
-| `npm run build`  | Builds the app for production          |
-| `npm run export` | Creates optimized files for deployment |
-| `npm start`      | Runs the built app in production mode  |
+   </TabItem>
+   </Tabs>
 
-## Development vs Production
+   This will launch the development server, and your application should be accessible at `http://localhost:3000`.
 
-- **Development mode** provides features like hot reloading, detailed error messages, and development tools that help with debugging.
-- **Production mode** optimizes the application for performance by minifying code, optimizing assets, and disabling development features.
+## Troubleshooting
 
-## Testing Your Changes
+If you encounter any issues during the installation:
 
-After making changes to the code, you should test them thoroughly:
+1. Make sure you have the correct version of Node.js (or Bun) installed
+2. Check that all environment variables are correctly set in the `.env` file
+3. Try deleting the `node_modules` folder and running `npm i` (or `bun install`) again
+4. Check your console for specific error messages
 
-1. Test all affected features
-2. Verify responsive design on different screen sizes
-3. Check for any console errors
-4. Test on different browsers if possible
+## Next Steps
 
-## Development Tips
+After completing the installation, you'll need to:
 
-- Keep the browser console open to catch any JavaScript errors
-- Use the React Developer Tools browser extension for debugging
-- Make small, incremental changes and test frequently
-- Follow the existing code style and patterns
+1. [Configure API URL](./api-url.md)
+2. [Integrate Firebase](./firebase-integration.md)
+3. [Enable Firebase Authentication](./firebase-auth.md)
+4. [Set up Cloud Firestore](./cloud-firestore.md)
+5. [Customize your application](./web-customization.md)
