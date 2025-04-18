@@ -63,8 +63,7 @@ If you encounter any issues during the installation:
 
 After completing the installation, you'll need to:
 
-1. [Configure API URL](./api-url.md)
-2. [Integrate Firebase](./firebase-integration.md)
-3. [Enable Firebase Authentication](./firebase-auth.md)
-4. [Set up Cloud Firestore](./cloud-firestore.md)
-5. [Customize your application](./web-customization.md)
+1. [Integrate Firebase](./firebase-integration.md)
+2. [Enable Firebase Authentication](./firebase-auth.md)
+3. [Set up Cloud Firestore](./cloud-firestore.md)
+4. [Customize your application](./web-customization.md)
