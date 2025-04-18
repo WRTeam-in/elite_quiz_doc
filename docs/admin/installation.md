@@ -10,6 +10,10 @@ This guide will walk you through the process of installing the Elite Quiz Admin 
 
 1. **Create your domain or subdomain** on your server (shared hosting or VPS).
 
+   :::tip Recommendation for Web Users
+   If you have purchased the web version of Elite Quiz alongside the Admin Panel, it is recommended to install the **Admin Panel on a subdomain** (e.g., `admin.yourdomain.com`) and the **Web application on your main domain** (e.g., `yourdomain.com`). This separation helps in managing both applications effectively.
+   :::
+
 2. **Set up an empty database** on your server and keep track of these credentials:
 
    - Database name
