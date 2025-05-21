@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./ImageBackground.module.css";
+import React from 'react';
+import styles from './ImageBackground.module.css';
 
 export default function ImageBackground({ children }) {
   return (

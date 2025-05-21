@@ -6,10 +6,6 @@ sidebar_position: 1
 
 The Elite Quiz Admin Panel is a comprehensive dashboard that allows you to manage all aspects of your quiz application. From this centralized control panel, you can manage users, quizzes, settings, and more.
 
-:::caution Note
-The web-based payment gateway is currently unavailable for security reasons or due to the Google In-App purchase system. However, you can purchase coins directly from the app, and these purchases will also be reflected on the web platform.
-:::
-
 ## Demo Access
 
 You can check out our demo panel at:

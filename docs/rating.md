@@ -2,49 +2,39 @@
 sidebar_position: 9
 ---
 
-# Your Feedback
+# Feedback & Suggestions
 
-Your feedback is incredibly valuable to us! It helps us improve Elite Quiz and deliver a better experience for all users.
+Your feedback is the driving force behind Elite Quiz's continuous improvement. We value your input and actively use it to shape the future of our platform.
 
-## Rate on Envato
+## Share Your Feedback
 
-If you're enjoying Elite Quiz, please take a moment to rate it on Envato. Your positive ratings help others discover our product and support our continued development.
+We use [Canny.io](https://elitequiz.canny.io/) as our official feedback platform. Here you can:
 
-[Rate Elite Quiz on Envato ⭐](https://codecanyon.net/downloads)
+- Submit new feature requests
+- Vote on existing suggestions
+- Track feature development status
+- See what's planned for future updates
 
-## Submit Feedback
+## Rate & Review
 
-We're always looking for ways to improve! Please share your:
+We greatly value your appreciation and feedback. Your positive input regarding our product would be immensely valuable to us. Taking just a brief 2-3 minutes of your time to review our product would be highly appreciated. To begin, kindly click on the link provided below:
 
-- Feature suggestions
-- Usability feedback
-- Performance observations
-- Design impressions
-
-You can submit feedback through:
-
-- Our support email: support@wrteam.in
-- The contact form on our website
-- Direct message on Envato
-
-## Reporting Issues
-
-If you encounter any issues or bugs, please provide as much detail as possible:
-
-1. A clear description of the problem
-2. Steps to reproduce the issue
-3. Screenshots or screen recordings if applicable
-4. Browser/device information
-5. Error messages from the console (if any)
-
-## Feature Requests
-
-We love hearing your ideas for new features! When suggesting new features, please include:
-
-1. A clear description of the feature
-2. Why this feature would be valuable
-3. How you envision it working
+[Review Our Product](https://codecanyon.net/downloads) 😊🌟
 
 ## Success Stories
 
-We'd love to hear how Elite Quiz has helped your business or organization! If you have a success story you'd like to share, please contact us. We may feature it in our promotional materials with your permission.
+We love hearing how Elite Quiz has helped your organization! Share your success story to:
+- Inspire other users
+- Get featured in our promotional materials
+- Help us understand your use case
+- Guide future development
+
+Contact us at support@wrteam.in to share your story.
+
+## Stay Updated
+
+- Follow our [Feedback Board](https://elitequiz.canny.io/) for feature updates
+- Check the [Changelog](/docs/changelog) for recent improvements
+- Subscribe to [our newsletter](https://wrteam.in/) for any news about the new update, upcoming sales
+
+Your feedback helps us make Elite Quiz better for everyone. Thank you for being part of our community!

@@ -38,19 +38,19 @@
 }
 
 /* Enhance contrast in dark mode */
-html[data-theme="dark"] .token.comment {
+html[data-theme='dark'] .token.comment {
   color: #7f848e;
 }
 
-html[data-theme="dark"] .token.punctuation {
+html[data-theme='dark'] .token.punctuation {
   color: #7d8799;
 }
 
-html[data-theme="dark"] .token.variable {
+html[data-theme='dark'] .token.variable {
   color: #ef596f;
 }
 
-html[data-theme="dark"] .token.string {
+html[data-theme='dark'] .token.string {
   color: #89ca65;
 }
 
@@ -76,6 +76,6 @@ html[data-theme="dark"] .token.string {
 }
 
 /* Add an icon to .env files */
-.code-block-file-name[data-file-name$=".env"]::before {
-  content: "🔐 ";
+.code-block-file-name[data-file-name$='.env']::before {
+  content: '🔐 ';
 }

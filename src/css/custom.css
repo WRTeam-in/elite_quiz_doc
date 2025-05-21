@@ -5,7 +5,7 @@
  */
 
 /* Import additional CSS files */
-@import "./syntax-highlighting.css";
+@import './syntax-highlighting.css';
 
 /* You can override the default Infima variables here. */
 :root {
@@ -23,7 +23,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --ifm-color-primary: #ff4a9e;
   --ifm-color-primary-dark: #ff288f;
   --ifm-color-primary-darker: #ff1787;
@@ -42,7 +42,7 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme="dark"] .docusaurus-highlight-code-line {
+html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -111,13 +111,13 @@ button,
 /* Make the code samples in the .env file look better */
 .prism-code {
   padding: 16px !important;
-  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", Menlo, Monaco,
-    Consolas, monospace !important;
+  font-family:
+    'JetBrains Mono', 'Fira Code', 'Source Code Pro', Menlo, Monaco, Consolas, monospace !important;
 }
 
 /* Show file icon for .env code blocks */
-[class*=".env"]::before {
-  content: "📄";
+[class*='.env']::before {
+  content: '📄';
   display: inline-block;
   margin-right: 8px;
 }
@@ -128,11 +128,11 @@ button,
 }
 
 /* Add extra spacing for changelog section */
-.menu__list-item-collapsible[href*="changelog"] + .menu__list {
+.menu__list-item-collapsible[href*='changelog'] + .menu__list {
   margin-top: 8px;
 }
 
-.menu__list-item-collapsible[href*="changelog"] + .menu__list .menu__list-item {
+.menu__list-item-collapsible[href*='changelog'] + .menu__list .menu__list-item {
   margin-bottom: 8px;
 }
 
@@ -168,7 +168,7 @@ button,
 }
 
 .changelog-container details summary::after {
-  content: "+";
+  content: '+';
   position: absolute;
   right: 16px;
   font-size: 1.5rem;
@@ -178,7 +178,7 @@ button,
 }
 
 .changelog-container details[open] summary::after {
-  content: "-";
+  content: '-';
   transform: translateY(-50%) rotate(0deg);
 }
 

@@ -1,59 +1,68 @@
 ---
 sidebar_position: 8
+pagination_prev: null
 ---
 
-# Support
+# Support & Help Center
 
-We are here to help you with any issues you might encounter with Elite Quiz. Our support team is ready to assist you.
+We're committed to helping you get the most out of your Elite Quiz platform. Whether you're setting up your first quiz or need help with advanced features, our support team is here to assist you.
 
-## Support Team Contacts
+## How to Get Help
 
-### Admin Panel Support
+### 1. Documentation
+Before contacting support, please check our comprehensive documentation. You can find detailed guides on:
+- Installation and setup
+- Feature usage
+- Configuration
+- Troubleshooting
+- Best practices
 
-Hemal Gondaliya for Admin Panel Support on [Teams](https://teams.live.com/l/invite/FEAPvh1MHf8NYV3uAE)
+### 2. Contact Support
+If you need additional help, our dedicated support team is available through multiple channels:
 
-### Web Support
+#### Admin Panel Support
+- **Contact**: Hemal Gondaliya
+- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAPvh1MHf8NYV3uAE)
+- **Scope**: Admin panel setup, configuration, and management
 
-Jaydip Sodha for Web Support on [Teams](https://teams.live.com/l/invite/FEAwXxMcrb86u2BHwE)
+#### Web Application Support
+- **Contact**: Jaydip Sodha
+- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAwXxMcrb86u2BHwE)
+- **Scope**: Web application setup, customization, and issues
 
-### App Support
-Jay Parmar for App Support on [Teams](https://teams.live.com/l/invite/FEAJ7VEK0EAhWzZTQE)
+#### Mobile App Support
+- **Contact**: Jay Parmar
+- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAJ7VEK0EAhWzZTQE)
+- **Scope**: Mobile app setup, features, and troubleshooting
 
-### Email Support
+#### Email Support
+- **Email**: support@wrteam.in
+- **Response Time**: Within 24 hours
+- **Scope**: General inquiries and non-urgent issues
 
-You can reach us at: support@wrteam.in
+## Support Hours
+Our support team is available:
+- **Days**: Monday through Friday
+- **Hours**: 9:00 AM to 6:00 PM IST (GMT +5:30)
+- **Location**: India (Asia)
 
-## Support Hours and Response Time
+## For Faster Support
+To help us assist you more effectively, please include:
 
-To help our customers, we constantly stay in touch with every customer if they need any assistance regarding our product. We offer our customers support from:
+1. **Purchase Information**
+   - Your purchase code (find your purchase code from )
+   - Product version
+   - Platform (Web/Mobile/Admin)
 
-**Monday – Friday 9.00am to 6.00pm IST (GMT +5.30)** – We are a Team located in India – Asia.
+2. **Issue Details**
+   - Clear description of the problem
+   - Steps to reproduce
+   - Expected vs. actual behavior
 
-Typically we reply to our customers for all questions and queries within 24 hours via comments, support forum or emails.
+3. **Supporting Materials**
+   - Screenshots
+   - Error messages
+   - Video recordings (if applicable)
+   - Log files (if available)
 
-## When Contacting Support
-
-For faster resolution, please include:
-
-- Your purchase code
-- Clear description of the issue
-- Screenshots or videos (if applicable)
-- Steps to reproduce the issue
-
-## Visit Us
-
-Website: [https://wrteam.in](https://wrteam.in)
-
-## Frequently Asked Questions
-
-### How do I update to the latest version?
-
-Please check the documentation section on updates for detailed instructions.
-
-### Can I customize the app beyond what's in the documentation?
-
-Yes, the app is built with standard web technologies. If you need custom features, you can modify the code or contact us for custom development services.
-
-### How do I get my purchase code?
-
-Your purchase code is available in your Envato purchase history. If you can't find it, please check our [detailed guide on finding your purchase code](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code) or contact Envato support.
+If you can't find what you're looking for, our support team is just a message away. We typically respond to all inquiries within 24 hours through your preferred contact method.
