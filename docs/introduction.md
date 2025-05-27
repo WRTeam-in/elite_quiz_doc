@@ -15,6 +15,7 @@ This documentation covers both the Elite Quiz Mobile App and Web Application. Wh
 ## Version Compatibility
 
 It's crucial to maintain version consistency across your Elite Quiz ecosystem:
+
 - Your Admin Panel version must match your App/Web version
 - For example, if you're using App/Web version 1.0.0, your Admin Panel must also be version 1.0.0
 

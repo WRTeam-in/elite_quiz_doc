@@ -17,6 +17,16 @@ export default {
       label: 'Introduction',
     },
     {
+      type: 'doc',
+      id: 'overview',
+      label: 'Overview',
+    },
+    {
+      type: 'doc',
+      id: 'features',
+      label: 'Features',
+    },
+    {
       type: 'category',
       label: 'Admin Panel',
       items: [
@@ -58,8 +68,8 @@ export default {
     },
     {
       type: 'category',
-      label: 'Change Logs',
-      items: ['changelog/index', 'changelog/web', 'changelog/app'],
+      label: 'Changelogs',
+      items: ['changelog/web', 'changelog/app'],
     },
     {
       type: 'doc',

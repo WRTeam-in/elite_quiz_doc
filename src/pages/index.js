@@ -40,7 +40,7 @@ function QuickLinks() {
             <h3>Mobile App</h3>
             <p>Discover the features of our mobile application</p>
           </Link>
-          <Link className={styles.quickLinkCard} to="/docs/changelog">
+          <Link className={styles.quickLinkCard} to="/docs/changelog/web">
             <h3>Change Logs</h3>
             <p>View updates and version history for our products</p>
           </Link>

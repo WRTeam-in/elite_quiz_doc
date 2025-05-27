@@ -24,6 +24,7 @@ We greatly value your appreciation and feedback. Your positive input regarding o
 ## Success Stories
 
 We love hearing how Elite Quiz has helped your organization! Share your success story to:
+
 - Inspire other users
 - Get featured in our promotional materials
 - Help us understand your use case
@@ -34,7 +35,7 @@ Contact us at support@wrteam.in to share your story.
 ## Stay Updated
 
 - Follow our [Feedback Board](https://elitequiz.canny.io/) for feature updates
-- Check the [Changelog](/docs/changelog) for recent improvements
+- Check the [Changelog](/docs/changelog/web) for recent improvements
 - Subscribe to [our newsletter](https://wrteam.in/) for any news about the new update, upcoming sales
 
 Your feedback helps us make Elite Quiz better for everyone. Thank you for being part of our community!
