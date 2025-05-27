@@ -33,7 +33,7 @@ To set up your Elite Quiz platform, follow these steps in order:
 
 We're committed to providing excellent support for our customers. If you need assistance:
 
-1. Visit our [Support](/docs/support) page for contact information
+1. Visit our [Support](/support) page for contact information
 2. When contacting support, please include:
    - Your purchase code
    - A detailed description of your issue or question
@@ -45,8 +45,8 @@ To find your purchase code, refer to this [guide](https://help.market.envato.com
 
 Explore the following sections to learn more about Elite Quiz:
 
-- [Overview](/docs/overview) - Detailed explanation of Elite Quiz features and capabilities
-- [Features](/docs/features) - Comprehensive guide to all available features
-- [FAQ](/docs/faq) - Answers to common questions and troubleshooting tips
+- [Overview](/overview) - Detailed explanation of Elite Quiz features and capabilities
+- [Features](/features) - Comprehensive guide to all available features
+- [FAQ](/faq) - Answers to common questions and troubleshooting tips
 
-Need help? Our support team is always ready to assist you. Contact us through the [Support](/docs/support) page.
+Need help? Our support team is always ready to assist you. Contact us through the [Support](/support) page.

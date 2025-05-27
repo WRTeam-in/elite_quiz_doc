@@ -70,7 +70,7 @@ You can get help through:
 - Our documentation
 - Support email: support@wrteam.in
 - [Feedback Board](https://elitequiz.canny.io/)
-- [Support Team](/docs/support)
+- [Support Team](/support)
 
 ## Customization & Development
 

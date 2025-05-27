@@ -33,7 +33,7 @@ export default {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: 'docs',
+          routeBasePath: '/',
         },
         theme: {
           customCss: './src/css/custom.css',

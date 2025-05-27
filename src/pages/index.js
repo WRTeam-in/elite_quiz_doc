@@ -13,7 +13,7 @@ function HomepageHeader() {
         <h1 className={styles.hero__title}>{siteConfig.title}</h1>
         <p className={styles.hero__subtitle}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/introduction">
+          <Link className="button button--secondary button--lg" to="/introduction">
             Get Started
           </Link>
         </div>
@@ -28,19 +28,19 @@ function QuickLinks() {
       <div className="container">
         <h2 className={styles.quickLinksHeading}>Quick Access</h2>
         <div className={styles.quickLinksGrid}>
-          <Link className={styles.quickLinkCard} to="/docs/admin/overview">
+          <Link className={styles.quickLinkCard} to="/admin/overview">
             <h3>Admin Panel</h3>
             <p>Manage your quiz platform with our comprehensive admin panel</p>
           </Link>
-          <Link className={styles.quickLinkCard} to="/docs/web/setup-nodejs">
+          <Link className={styles.quickLinkCard} to="/web/setup-nodejs">
             <h3>Web Application</h3>
             <p>Explore the web version of Elite Quiz and its features</p>
           </Link>
-          <Link className={styles.quickLinkCard} to="/docs/mobile/overview">
+          <Link className={styles.quickLinkCard} to="/mobile/overview">
             <h3>Mobile App</h3>
             <p>Discover the features of our mobile application</p>
           </Link>
-          <Link className={styles.quickLinkCard} to="/docs/changelog/web">
+          <Link className={styles.quickLinkCard} to="/changelog/web">
             <h3>Change Logs</h3>
             <p>View updates and version history for our products</p>
           </Link>
