@@ -125,14 +125,15 @@ Elite Quiz uses Firebase Realtime Database for real-time battle functionality. T
 
 The final step is to connect your app to your Admin Panel:
 
-1. Open the file `lib/utils/constant.dart` in your project
-2. Look for the BASE_URL constant and update it with your Admin Panel URL:
+1. Open the file `lib/core/config/config.dart` in your project
+2. Look for the panelUrl constant and update it with your Admin Panel URL:
 
 ```dart
-const String BASE_URL = "https://your-admin-panel-url.com/api/";
+/// Add your panel url here
+// NOTE: make sure to not add '/' at the end of url
+// NOTE: make sure to check if admin panel is http or https
+const panelUrl = 'https://your-admin-panel-url.com';
 ```
-
-Make sure to include the trailing slash at the end of the URL.
 
 ## Testing Firebase Integration
 
