@@ -4,7 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 export default {
   title: 'Elite Quiz Documentation',
-  tagline: 'Documentation for Elite Quiz Web & App',
+  tagline: 'Web & App',
   url: 'https://wrteam-in.github.io',
   baseUrl: '/elite_quiz_doc',
   onBrokenLinks: 'warn',

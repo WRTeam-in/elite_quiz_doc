@@ -1,7 +1,18 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["docusaurus", "mdx", "clsx", "svgr", "prism", "WRTeam", "Elite", "Quiz"],
+  "words": [
+    "clsx",
+    "docusaurus",
+    "Elite",
+    "Gondaliya",
+    "mdx",
+    "prism",
+    "Quiz",
+    "Sodha",
+    "svgr",
+    "WRTeam"
+  ],
   "ignorePaths": [
     "node_modules/**",
     "build/**",
@@ -12,7 +23,10 @@
     "package-lock.json",
     "yarn.lock"
   ],
-  "ignoreRegExpList": ["/[A-Z]{2,}/g", "/[a-z]+[A-Z][a-z]+/g"],
+  "ignoreRegExpList": [
+    "/[A-Z]{2,}/g",
+    "/[a-z]+[A-Z][a-z]+/g"
+  ],
   "allowCompoundWords": true,
   "dictionaries": [
     "en-gb",

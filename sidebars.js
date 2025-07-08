@@ -21,11 +21,11 @@ export default {
       id: 'overview',
       label: 'Overview',
     },
-    {
-      type: 'doc',
-      id: 'features',
-      label: 'Features',
-    },
+    // {
+    //   type: 'doc',
+    //   id: 'features',
+    //   label: 'Features',
+    // },
     {
       type: 'category',
       label: 'Admin Panel',
@@ -36,6 +36,11 @@ export default {
         'admin/settings',
         'admin/system-language',
       ],
+    },
+    {
+      type: 'doc',
+      id: 'common_firebase_config',
+      label: 'Common Firebase Configuration',
     },
     {
       type: 'category',

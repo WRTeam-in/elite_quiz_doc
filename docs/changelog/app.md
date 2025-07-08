@@ -11,7 +11,7 @@ This page documents the version history and updates for the Elite Quiz Mobile ap
 | Product Version | Flutter version |
 | --------------- | --------------- |
 | v2.3.3          | v3.29.3         |
-| v2.3.2          | v3.29.2         |
+| v2.3.2          | v3.29.3         |
 | v2.3.1          | v3.29.3         |
 | v2.2.6          | v3.27.1         |
 | v2.2.5          | v3.24.4         |

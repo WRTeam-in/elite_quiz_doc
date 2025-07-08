@@ -46,7 +46,7 @@ To find your purchase code, refer to this [guide](https://help.market.envato.com
 Explore the following sections to learn more about Elite Quiz:
 
 - [Overview](/overview) - Detailed explanation of Elite Quiz features and capabilities
-- [Features](/features) - Comprehensive guide to all available features
+<!-- - [Features](/features) - Comprehensive guide to all available features -->
 - [FAQ](/faq) - Answers to common questions and troubleshooting tips
 
 Need help? Our support team is always ready to assist you. Contact us through the [Support](/support) page.

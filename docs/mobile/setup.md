@@ -2,15 +2,11 @@
 sidebar_position: 2
 ---
 
-# Flutter Setup
+# Initial Setup
 
 This guide will walk you through setting up Flutter for the Elite Quiz App development.
 
-## Setting Up Flutter
-
-Flutter is an open-source UI software development toolkit created by Google that allows you to build natively compiled applications for mobile, web, and desktop from a single codebase.
-
-### Installing Flutter
+## Setup
 
 1. Download Flutter SDK from [flutter.dev](https://flutter.dev/docs/get-started/install)
 2. Extract the downloaded zip file in a location of your choice (avoid paths with special characters or spaces)
@@ -18,7 +14,7 @@ Flutter is an open-source UI software development toolkit created by Google that
 4. Open a terminal/command prompt and run the following command to verify the installation:
 
 ```bash
-flutter doctor
+flutter doctor -v
 ```
 
 This command checks your environment and displays a report of the status of your Flutter installation:
@@ -51,9 +47,11 @@ You can use any of the following IDEs for Flutter development:
 2. Install the Xcode Command Line Tools
 3. Set up an iOS simulator or connect a physical iOS device
 
-## Running the Flutter Project
+## Running the app
 
-After setting up your development environment, you can now run the Elite Quiz Flutter project:
+After setting up your development environment, without making any changes to the code simply try to run the app.
+
+This is to ensure that first your setup is done correctly, and you are able to run the app, and second that you know that app runs and if there is any issue you run into and not able to run the app, then it is not because of the app code.
 
 1. Open a terminal/command prompt and navigate to the project directory
 2. Run the following command to get all dependencies:
@@ -81,4 +79,4 @@ If you encounter any issues during the Flutter setup, try the following:
 4. Check your PATH environment variable
 5. Restart your computer after installation
 
-If you still face issues, please refer to the [Flutter documentation](https://flutter.dev/docs) or contact our support team.
+If you still face issues, please refer to the [Flutter documentation](https://flutter.dev/docs).

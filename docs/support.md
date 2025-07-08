@@ -15,7 +15,7 @@ Before contacting support, please check our comprehensive documentation. You can
 
 - Installation and setup
 - Feature usage
-- Configuration
+- Deployment
 - Troubleshooting
 - Best practices
 
