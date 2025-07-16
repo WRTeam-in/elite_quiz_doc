@@ -68,6 +68,7 @@ export default {
         'mobile/customization',
         'mobile/monetization',
         'mobile/deployment',
+        'mobile/update',
         'mobile/faq',
       ],
     },
