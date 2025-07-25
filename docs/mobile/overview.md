@@ -11,6 +11,10 @@ This guide will help you understand, set up, and customize your own version of o
 
 Before you begin, ensure your development environment meets these specifications. Using different versions may lead to compatibility issues.
 
+:::caution Version Compatibility
+We have tested App Code with the software versions listed below. If you choose to use newer or different versions, you are responsible for addressing any compatibility issues that may occur. Our support and documentation are based on the specified versions.
+:::
+
 ### Required Software
 
 #### Core Requirements
@@ -27,17 +31,17 @@ Before you begin, ensure your development environment meets these specifications
 
 #### Optional, But Recommended
 
-- Firebase CLI
+- **Firebase CLI**: [Install](https://firebase.google.com/docs/cli)
 
 :::warning Important Note
-Setting up your development environment correctly is crucial for success. While we provide these specifications, you are responsible for ensuring your development tools are properly configured. If you encounter issues with different versions, you'll need to resolve them **independently**.
+Setting up your development environment correctly is crucial for success. you must have your development tools **properly configured** according to the specifications above before requesting support. Also note that assisting you with setting up your development environment is **not** part of our support services.
 :::
 
 ## Getting Started
 
 To set up and customize the Elite Quiz Mobile App, you'll need to:
 
-1. Set up your development environment
+1. Properly set up your development environment
 2. Configure the project and run it
 3. Change package name and app name as needed
 4. Integrate Firebase services
