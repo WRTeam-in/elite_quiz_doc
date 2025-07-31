@@ -49,9 +49,9 @@ You can use any of the following IDEs for Flutter development:
 
 ## Running the app
 
-After setting up your development environment, without making any changes to the code simply try to run the app.
+After setting up your development environment, **_without_** making any changes to the code simply try to run the app.
 
-This is to ensure that first your setup is done correctly, and you are able to run the app, and second that you know that app runs and if there is any issue you run into and not able to run the app, then it is not because of the app code.
+This ensures your setup is correct and the app runs as expected. Later on if you encounter issues, you can be confident the problem is not with the app code, but with your environment or configuration.
 
 1. Open a terminal/command prompt and navigate to the project directory
 2. Run the following command to get all dependencies:

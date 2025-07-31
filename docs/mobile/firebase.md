@@ -2,145 +2,92 @@
 sidebar_position: 4
 ---
 
-# Firebase Integration
+# Authentication Setup
 
-Elite Quiz uses Firebase for authentication, real-time database operations, and cloud storage. This guide will walk you through integrating Firebase with your app.
+Before you begin, make sure you have completed the initial [Common Firebase Configuration](link to common firebase configuration section).
 
-## Creating a Firebase Project
+**Prerequisites:**
 
-1. Go to the [Firebase Console](https://console.firebase.google.com/)
-2. Click on "Add project" and follow the prompts to create a new project
-3. Enter a project name and accept the Firebase terms
-4. Choose whether to enable Google Analytics (recommended)
-5. Complete the project setup
+- You should have already changed your app’s package name.
+- If using the FlutterFire CLI, ensure it is installed and you are logged in.
 
-![Create Firebase 1](/img/app/createFirebase1.webp)
+## Quick Setup with FlutterFire CLI
 
-![Create Firebase 2](/img/app/createFirebase2.webp)
+The FlutterFire CLI depends on the Firebase CLI.
 
-After creating the project, you'll be taken to the Firebase project dashboard:
+**Install the FlutterFire CLI if not already done so**
 
-![Create Firebase 3](/img/app/createFirebase3.webp)
+run the following command in terminal to install
 
-## Adding Your App to Firebase
+```sh
+dart pub global activate flutterfire_cli
+```
 
-### Adding Android App
+1. Go to your Firebase project settings and copy your Project ID.
+2. In your terminal, run:
+   ```sh
+   flutterfire --configure project=<your-project-id>
+   ```
+3. Follow the prompts to complete the configuration.
 
-1. In the Firebase console, click on the Android icon to add an Android app
-2. Enter your app's package name (the one you configured in the previous section)
-3. Enter an app nickname (optional)
-4. Enter your app's SHA-1 signing certificate (for Google Sign-In to work properly)
-5. Click "Register app"
+## Manual Firebase Setup
+
+### Add Your Android App
+
+1. In the Firebase console, click the Android icon to add a new app.
+2. Enter your app’s package name (as configured earlier).
+3. Optionally, add an app nickname.
+4. Click **Register app**.
 
 ![Add Android](/img/app/addAndroid.webp)
 
-6. Download the `google-services.json` file
-7. Click "Next" and follow the remaining setup instructions
+6. Download the `google-services.json` file.
+7. Click **Next** and follow the remaining setup steps.
 
 ![Add Android 2](/img/app/addAndroid2.webp)
-
 ![Add Android 3](/img/app/addAndroid3.webp)
-
 ![Add Android 4](/img/app/addAndroid4.webp)
-
 ![Add Android 5](/img/app/addAndroid5.webp)
-
 ![Add Android 6](/img/app/addAndroid6.webp)
 
-8. Place the `google-services.json` file in the `android/app` directory of your Flutter project
+8. Place `google-services.json` in your Flutter project at `android/app/`.
 
-### Adding iOS App
+### Add Your iOS App
 
-1. In the Firebase console, click on the iOS icon to add an iOS app
-2. Enter your app's Bundle ID (found in the `ios/Runner.xcodeproj/project.pbxproj` file)
-3. Enter an app nickname (optional)
-4. Enter your App Store ID (optional)
-5. Click "Register app"
+1. In the Firebase console, click the iOS icon to add a new app.
+2. Enter your app’s Bundle ID (found in `ios/Runner.xcodeproj/project.pbxproj`).
+3. Optionally, add an app nickname and App Store ID.
+4. Click **Register app**.
 
 ![Add iOS](/img/app/addIos.webp)
 
-6. Download the `GoogleService-Info.plist` file
-7. Click "Next" and follow the remaining setup instructions
+5. Download the `GoogleService-Info.plist` file.
+6. Click **Next** and follow the remaining setup steps.
 
 ![Add iOS 2](/img/app/addIos2.webp)
-
 ![Add iOS 3](/img/app/addIos3.webp)
-
 ![Add iOS 4](/img/app/addIos4.webp)
-
 ![Add iOS 5](/img/app/addIos5.webp)
-
 ![Add iOS 6](/img/app/addIos6.webp)
 
-8. Place the `GoogleService-Info.plist` file in the `ios/Runner` directory of your Flutter project
+7. Place `GoogleService-Info.plist` in your Flutter project at `ios/Runner/`.
 
-## Enabling Firebase Authentication
+---
 
-Elite Quiz supports multiple authentication methods. Here's how to enable them:
+## Understanding App Flow and Authentication
 
-1. In the Firebase console, go to Authentication > Sign-in method
-2. Enable the authentication methods you want to use:
-   - Email/Password
-   - Google
-   - Facebook
-   - Phone
-   - Apple (for iOS)
+Before moving forward, let’s clarify how the app and authentication process work. Most login issues reported to support are due to configuration errors—not problems with the app, web, or admin panel code.
 
-![Add Firebase Auth](/img/app/addFirebaseAuth.webp)
+To help you avoid these common pitfalls, we’ll explain the key concepts and flow. Please review this section carefully, as it’s essential for a smooth setup and successful authentication.
 
-### Configuring Google Sign-In
+---
 
-Google Sign-In is enabled by default when you add Firebase Authentication. Make sure you've added your SHA-1 fingerprint to your Firebase project.
+## Test Your Firebase Integration
 
-### Configuring Facebook Sign-In
-
-To enable Facebook authentication:
-
-1. Create a Facebook Developer account and app at [developers.facebook.com](https://developers.facebook.com/)
-2. Configure your Facebook app for authentication
-3. Add the Facebook App ID and App Secret to Firebase Authentication
-
-![Auth 1](/img/app/auth-1.webp)
-
-### Configuring Phone Authentication
-
-To enable Phone authentication:
-
-1. In the Firebase console, go to Authentication > Sign-in method
-2. Enable Phone authentication
-3. Add your test phone numbers if using in development
-
-![Auth 2](/img/app/auth-2.webp)
-
-## Setting Up Firebase for Battles
-
-Elite Quiz uses Firebase Realtime Database for real-time battle functionality. To set this up:
-
-1. In the Firebase console, go to Realtime Database
-2. Click "Create Database"
-3. Choose a location (preferably close to your target audience)
-4. Start in test mode, then adjust security rules later
-
-## Connecting to Admin Panel
-
-The final step is to connect your app to your Admin Panel:
-
-1. Open the file `lib/core/config/config.dart` in your project
-2. Look for the panelUrl constant and update it with your Admin Panel URL:
-
-```dart
-/// Add your panel url here
-// NOTE: make sure to not add '/' at the end of url
-// NOTE: make sure to check if admin panel is http or https
-const panelUrl = 'https://your-admin-panel-url.com';
-```
-
-## Testing Firebase Integration
-
-After completing all the steps above, restart your app and test the following:
+After setup, restart your app and test:
 
 1. User registration and login
-2. Social authentication methods (Google, Facebook, etc.)
+2. Social authentication (Google, Apple etc.)
 3. Real-time battle functionality
 
-If any issues occur, check the Firebase console logs and your app logs for detailed error messages.
+If you encounter issues, check both the Firebase console and your app logs for error details.

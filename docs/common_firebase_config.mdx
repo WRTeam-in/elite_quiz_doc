@@ -7,8 +7,6 @@ pagination_next: null
 
 This guide will help you set up Firebase for Elite Quiz, step by step. No prior experience with Firebase is required. Just follow along, and you’ll be ready in no time.
 
-> **Note:** After finishing these steps, check the next guide for instructions specific to your platform (mobile or web).
-
 ---
 
 ## Why Do I Need Firebase?
@@ -38,6 +36,8 @@ You’ll see your new project dashboard when it’s ready.
 ## Step 2: Enable Sign-In Methods
 
 Elite Quiz supports several ways for users to sign in. Enable them all now — you can turn off any you don’t want later from the admin panel.
+
+> **Important Note:** To use Phone/OTP Login, your Firebase project must be on the **Blaze** (pay-as-you-go) plan. This feature will not work on the Spark (free tier) plan.
 
 **How to enable sign-in methods:**
 
@@ -80,11 +80,10 @@ import Video from '@site/src/components/Video';
    ![Screenshot: Select Database Location](/img/common/firestore_create_step2.png)
 
 4. **Set Firestore Security Rules:**
-
    - Go to the **Rules** tab.
    - Delete any existing rules and paste in the following:
 
-   ```
+   ```javascript
     rules_version = '2';
     service cloud.firestore {
         match /databases/{database}/documents {
@@ -98,7 +97,6 @@ import Video from '@site/src/components/Video';
    ![Screenshot: Add Rule in Firestore](/img/common/firestore_rules.webp)
 
 5. **Create an Index for Messaging**
-
    - This is needed for the in-game chat feature.
    - In Firestore, go to the **Indexes** tab.
    - Click **Add Index** and fill in:
