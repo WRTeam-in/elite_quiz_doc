@@ -5,7 +5,7 @@ sidebar_position: 4
 
 This guide provides instructions for integrating Firebase Authentication into your App.
 
-Before proceeding, ensure you have completed the initial [Common Firebase Configuration](../common_firebase_config.mdx).
+Before proceeding, ensure you have completed the initial [Common Firebase Configuration](../common_firebase_config).
 
 #### Prerequisites
 

@@ -59,7 +59,7 @@ export default {
         'mobile/overview',
         'mobile/setup',
         'mobile/configuration',
-        'mobile/keystores-and-authentication-flow-android',
+        'mobile/keystore',
         'mobile/firebase',
         'mobile/customization',
         'mobile/monetization',

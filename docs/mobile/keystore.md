@@ -2,7 +2,7 @@
 sidebar_position: 3.5
 ---
 
-# Keystores and Authentication Flow for Android
+# Android App Signing: Keystores and SHA Keys
 
 Before going further, it's **very important** to understand how your app works and how user login happens. Most login problems are due to **setup mistakes**, not issues with the app, website, or admin panel code. To help you **avoid these common problems**, we'll explain the key ideas and the overall login process.
 
@@ -30,12 +30,6 @@ Knowing about keystores, what kinds there are, how to check which one is being u
     You can check this by going to `android/app/build.gradle` and looking for `signingConfig` to see which one is uncommented (doesn't have `//` before the line).
 
     ![Android Build Mode](/img/app/android_build_mode.png)
-
-    You can also use a Gradle command to check. After running your app once, go to the `android` folder of your project in the terminal and run:
-
-    ```sh
-    ./gradlew :app:signingReport
-    ```
 
 ## How to Get SHA Keys
 
@@ -66,6 +60,12 @@ Knowing about keystores, what kinds there are, how to check which one is being u
     ```
 
     You will be asked to enter the keystore password.
+
+    You can also use a Gradle command to check. After running your app once, go to the `android` folder of your project in the terminal and run:
+
+    ```sh
+    ./gradlew :app:signingReport
+    ```
 
 ### When and Why You Need SHA Keys
 
