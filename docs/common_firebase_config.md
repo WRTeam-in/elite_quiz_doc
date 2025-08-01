@@ -37,11 +37,13 @@ You’ll see your new project dashboard when it’s ready.
 
 Elite Quiz supports several ways for users to sign in. Enable them all now — you can turn off any you don’t want later from the admin panel.
 
-> **Important Note:** To use Phone/OTP Login, your Firebase project must be on the **Blaze** (pay-as-you-go) plan. This feature will not work on the Spark (free tier) plan.
+:::note Important Note
+To use Phone/OTP Login, your Firebase project must be on the **Blaze** (pay-as-you-go) plan. This feature will not work on the Spark (free tier) plan.
+:::
 
 **How to enable sign-in methods:**
 
-1. In your Firebase project, click **Authentication** in the left menu.
+1. In your Firebase project, click [**Authentication**](https://console.firebase.google.com/project/_/authentication/providers) in the left menu.
 2. Go to the **Sign-in method** tab.
 3. Enable these providers:
    - Email/Password
@@ -72,7 +74,7 @@ import Video from '@site/src/components/Video';
 
 ### Option 2: Follow These Steps
 
-1. In Firebase, click **Build** in the left menu, then select **Firestore Database**.
+1. In Firebase, click **Build** in the left menu, then select [**Firestore Database**](https://console.firebase.google.com/project/_/firestore/).
 2. Click **Create database**.
 3. Choose the location closest to your users and confirm.
 

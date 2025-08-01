@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Admin Panel Overview
+# Overview
 
 The Elite Quiz Admin Panel is a comprehensive dashboard that allows you to manage all aspects of your quiz application. From this centralized control panel, you can manage users, quizzes, settings, and more.
 

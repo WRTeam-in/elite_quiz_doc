@@ -21,11 +21,6 @@ export default {
       id: 'overview',
       label: 'Overview',
     },
-    // {
-    //   type: 'doc',
-    //   id: 'features',
-    //   label: 'Features',
-    // },
     {
       type: 'category',
       label: 'Admin Panel',
@@ -64,6 +59,7 @@ export default {
         'mobile/overview',
         'mobile/setup',
         'mobile/configuration',
+        'mobile/keystores-and-authentication-flow-android',
         'mobile/firebase',
         'mobile/customization',
         'mobile/monetization',
