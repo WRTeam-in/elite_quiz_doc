@@ -2,6 +2,8 @@
 sidebar_position: 5
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # App Customization
 
 Customize the Elite Quiz App to match your brand identity and preferences.
@@ -14,7 +16,11 @@ You can customize the app logo that appears in the drawer menu and various scree
 2. Replace the `app_logo.png` file with your own logo (keep the same filename)
 3. Make sure your logo has the appropriate dimensions (recommended: 512x512 pixels)
 
-![Change App Logo](/img/app/change_app_logo.webp)
+ <img
+   src={useBaseUrl('/img/app/change_app_logo.webp')}
+   alt="Change App Logo"
+   style={{width: '30%', objectFit: 'cover'}}
+   />
 
 ## Changing Splash Screen & Login Screen Logo
 
@@ -24,7 +30,11 @@ The splash screen is the first screen users see when opening your app:
 2. Replace the `splash_logo.png` file with your own logo (keep the same filename)
 3. This logo is also used on the authentication screens
 
-![Change Splash and Logo](/img/app/change_splash_and_org_logo.webp)
+ <img
+   src={useBaseUrl('/img/app/change_splash_and_org_logo.webp')}
+   alt="Change Splash and Logo"
+   style={{width: '30%', objectFit: 'cover'}}
+   />
 
 ## Changing App Colors
 
