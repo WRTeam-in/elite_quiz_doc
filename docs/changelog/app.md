@@ -10,6 +10,8 @@ This page documents the version history and updates for the Elite Quiz Mobile ap
 
 | Product Version | Flutter version |
 | --------------- | --------------- |
+| v2.3.5          | v3.32.x         |
+| v2.3.4          | v3.32.x         |
 | v2.3.3          | v3.29.3         |
 | v2.3.2          | v3.29.3         |
 | v2.3.1          | v3.29.3         |
@@ -51,6 +53,61 @@ This page documents the version history and updates for the Elite Quiz Mobile ap
 | v1.0.2          | v2.5.0          |
 | v1.0.1          | v2.5.0          |
 | v1.0.0          | v2.5.0          |
+
+## v2.3.5
+
+```
+- Added: Coins and score are now Always visible on the result screen for better clarity.
+- Added: Pagination to the contest leaderboard for easier navigation.
+- Added: The "Buy Coins" option is now available in the "Not enough coins" dialog when trying to join a battle.
+- Fixed: 1v1 room creation no longer causes the app to freeze when Category Mode is off and no questions are available.
+- Fixed: A user who exits a 1v1 battle room is now properly removed, allowing new players to join.
+- Fixed: Addressed a bug that caused In-App Purchases to fail on iOS.
+- Fixed: Battle message container no longer overlaps with user containers.
+- Fixed: Changing the app language now correctly updates all text, including the bottom navigation bar and home screen titles.
+- Fixed: Contest leaderboard now displays proper error messages instead of error codes.
+- Fixed: Corrected an issue that caused the "Create/Edit Profile" screen to appear twice.
+- Fixed: Disconnected users who rejoin a battle will now correctly replace their old session instead of creating a duplicate entry.
+- Fixed: Group Battle winnings now correctly calculated based on the initial number of players, regardless of players leaving mid-game.
+- Fixed: Group battle opponent messages alignment issues.
+- Fixed: Local images, like profile avatars, now display correctly instead of showing a placeholder.
+- Fixed: Removed "Something went wrong" message after canceling an in-app purchase.
+- Fixed: Removed the "Congratulations" message when a match ends in a draw.
+- Fixed: Resolved a matchmaking issue in 1v1 battles caused by inconsistencies in the Language Mode setting.
+- Fixed: Resolved an issue causing false "No Internet" errors due to a package update.
+- Fixed: Resolved text overflow issues on the profile header and bottom navigation bar with long/non-english titles.
+- Fixed: Stale "Not enough coins" error no longer appears in random battle after leaving 1v1.
+- Fixed: Status bar backdrop added to all dialogs and sheets.
+- Fixed: System navigation bar background and contrast issues in multiple screens (Create/Join Room, Onboarding, Dashboard).
+- Fixed: The "Play Again" and "Next Level" buttons are now correctly displayed on the result screen.
+- Fixed: The contest list now automatically refreshes after completing a contest.
+- Fixed: The progress bar for opponents in Group Battles now updates correctly in real-time.
+- Fixed: The username field is now correctly cleared on the signup screen after a user logs out or deletes their account.
+- Fixed: Timers in quizzes and for messages now run at the correct speed, regardless of device animation settings.
+- Fixed: Users in 1v1 and Random Battles now correctly receive their winnings when an opponent leaves the match.
+- Improved: Code structure, removed unused parameters and UI polish, and enhanced reusability of utility functions.
+- Improved: Enhanced the user interface and animations on the Rewards screen.
+- Improved: Removed placeholder images during loading for a cleaner visual experience.
+- Improved: Updated scroll behavior to align with Material 3 design standards.
+- Improved: User rank, coins, and score on the home screen are now displayed in full number format (e.g., 100,000) for clarity.
+
+Note: This update includes numerous fixes and improvements from v2.3.4. All users are strongly advised to update to v2.3.5 for better stability and to avoid unexpected issues.
+Note: Please read the README.txt before proceeding with the update.
+
+```
+
+## v2.3.4 (17 July 2025)
+
+```
+- Added: NEW bottom navigation bar for a cleaner and faster navigation experience.  
+- Added: Bumped dependencies to the latest versions.  
+- Added: Compatible with latest Flutter 3.32.6.  
+- Added: Coins, score, badges, and reward distribution are now fully handled from the backend for significant security improvement.  
+- Improved: Code structure, removed unused cubits, repositories, and cleaned up redundant logic.  
+- Improved: Added new SVG avatars for profile picture.  
+
+Note: Please read the README.txt before proceeding with the update.
+```
 
 ## v2.3.3 (27 May 2025)
 
