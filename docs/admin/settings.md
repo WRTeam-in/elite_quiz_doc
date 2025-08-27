@@ -6,7 +6,7 @@ sidebar_position: 6
 
 The Settings section in the Elite Quiz Admin Panel provides comprehensive control over the appearance, behavior, and functionality of your quiz application.
 
-# Content Management
+## Content Management
 
 This section explains how to manage various content sections in the Elite Quiz admin panel.
 

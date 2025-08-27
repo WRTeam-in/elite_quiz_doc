@@ -30,6 +30,7 @@ export default {
         'admin/configuration',
         'admin/settings',
         'admin/system-language',
+        'admin/bulk-imports',
       ],
     },
     {

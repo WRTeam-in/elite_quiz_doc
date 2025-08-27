@@ -37,16 +37,16 @@ We have tested App Code with the software versions listed below. If you choose t
 Setting up your development environment correctly is crucial for success. you must have your development tools **properly configured** according to the specifications above before requesting support. Also note that assisting you with setting up your development environment is **not** part of our support services.
 :::
 
-## Getting Started
+---
 
-To set up and customize the Elite Quiz Mobile App, you'll need to:
+## Getting Started: Setup Roadmap
 
-1. Properly set up your development environment
-2. Configure the project and run it
-3. Change package name and app name as needed
-4. Integrate Firebase services
-5. Connect to your Admin Panel
-6. Customize the appearance and features
-7. Generate a release version for app stores
+The process of launching your app involves several key stages. The following sections of this documentation will provide detailed, step-by-step instructions for each of the following:
 
-Detailed instructions for each of these steps are provided in the following sections of this documentation.
+1.  **Environment Setup:** Configuring your computer with the required software.
+2.  **Project Configuration:** Running the app for the first time.
+3.  **Branding:** Changing the application's package name and display name.
+4.  **Firebase Integration:** Connecting the app to Firebase for backend services.
+5.  **Admin Panel Connection:** Linking the app to your Elite Quiz Admin Panel.
+6.  **Customization:** Tailoring the app's appearance, features, and functionality.
+7.  **Deployment:** Generating a release-ready version for the app stores.
