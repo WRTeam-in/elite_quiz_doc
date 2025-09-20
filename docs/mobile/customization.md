@@ -8,118 +8,186 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Customize the Elite Quiz App to match your brand identity and preferences.
 
-## Changing App Logo
+## Branding Structure
 
-You can customize the app logo that appears in the drawer menu and various screens:
+We've organized all branding-related configurations and assets into separate folders, making it easy to modify them without missing anything. This structure also simplifies updating to newer app versions, as you only need to check for changes in the config files and update the folders.
 
-1. Navigate to `assets/images/` directory in your project
-2. Replace the `app_logo.png` file with your own logo (keep the same filename)
-3. Make sure your logo has the appropriate dimensions (recommended: 512x512 pixels)
+There are two primary folders for branding customization:
 
- <img
-   src={useBaseUrl('/img/app/change_app_logo.webp')}
-   alt="Change App Logo"
-   style={{width: '30%', objectFit: 'cover'}}
-   />
+1. **App Configuration** (`lib/core/config`): Contains settings for panel URL, default theme, messages, payment methods, and other app configurations.
 
-## Changing Splash Screen & Login Screen Logo
+2. **Assets Configuration** (`assets/config`): Contains all images and assets related to branding, including sounds and profile avatar images you might want to customize.
 
-The splash screen is the first screen users see when opening your app:
+Beyond these folders, you're free to modify other assets and app code for additional flexibility. This separation makes rebranding the app straightforward for most users.
 
-1. Navigate to `assets/images/` directory in your project
-2. Replace the `splash_logo.png` file with your own logo (keep the same filename)
-3. This logo is also used on the authentication screens
+## Update App Launcher Icons
 
- <img
-   src={useBaseUrl('/img/app/change_splash_and_org_logo.webp')}
-   alt="Change Splash and Logo"
-   style={{width: '30%', objectFit: 'cover'}}
-   />
+We use the `flutter_launcher_icons` package to generate launcher icons for Android and iOS. This approach makes the process quick, easy, and reproducible—especially helpful for setup and app updates.
 
-## Changing App Colors
+### Setup Steps
 
-Elite Quiz allows you to easily change the app's color scheme:
+> Tip: For optimal results, separate your logo foreground from the background.
 
-1. Open the file `lib/utils/constants.dart`
-2. Look for the color constants and update them with your brand colors:
+1. Navigate to `assets/config/launcher_icons` and update these files:
 
-```dart
-// Primary Colors
-const Color primaryColor = Color(0xffF01876); // Main app color
-const Color secondaryColor = Color(0xff3C55D1); // Secondary app color
-const Color backgroundColor = Color(0xffffffff); // Background color
+   - `app_logo_icon.png`: 1024x1024 recommended
+   - `background.png`: 432x432 recommended
+   - `foreground.png`: 432x432 recommended
 
-// Text Colors
-const Color primaryTextColor = Color(0xff212121); // Main text color
-const Color secondaryTextColor = Color(0xff757575); // Secondary text color
+> **Image Format Note:** You can use JPG format, but you'll need to modify the `flutter_launcher_icons.yaml` file to specify the correct image format, otherwise it won't work.
 
-// Other Colors
-const Color pageBackgroundColor = Color(0xfff6f6f6); // Page background color
+2. Run the following command in your project directory to generate the icons:
+
+```shell
+dart run flutter_launcher_icons
 ```
 
-3. Save the file and restart your app to see the changes
+3. Verify Generated Icons
 
-![Change Colors](/img/app/change_colors.webp)
+   - **Android icons:** Generated in `android/app/src/main/res/`
+   - **iOS icons:** Generated in `ios/Runner/Assets.xcassets/AppIcon.appiconset/`
 
-## Managing App Languages (Translations)
+4. Additional Options
 
-Elite Quiz supports multiple languages. You can manage them in two ways:
+   - For platform-specific icons, use `image_path_android` and `image_path_ios`
+   - To remove alpha channel from iOS icons, add `remove_alpha_ios: true`
 
-### 1. Adding a New Language via Code
+### Apply Changes
 
-1. Open the `lib/language/languageEn.dart` file
-2. Copy this file and rename it according to your language (e.g., `languageFr.dart` for French)
-3. Translate all the strings in the new file
-4. Open `lib/language/language.dart` and add your new language to the list
+After generating the icons, rebuild your app to see the changes:
 
-### 2. Managing Languages from Admin Panel
+```shell
+flutter clean
+flutter pub get
+flutter run
+```
 
-You can also manage languages directly from the admin panel:
+## Update App Logos in the App
+
+You can customize the app logo that appears in the Splash screen, Sign in/ Sign up etc screens:
+
+1. Navigate to `assets/config/` directory in your project.
+2. Update the following images.
+   - `app_logo.svg`: shown in login, sign up, otp login etc screens.
+   - `placeholder.png`: shown in case of error or as a fallback in whole app. 96x96 recommended.
+   - `splash_logo.svg`: shown in the splash screen.
+   - `org_logo.svg`: shown in splash screen in the bottom.
+
+You can customize image formats and control org logo visibility by modifying the configuration file:
+
+```dart title='lib/core/config/config.dart'
+// Change logo file formats (png, jpg, etc.)
+const kAppLogo = 'app_logo.svg';
+const kSplashLogo = 'splash_logo.svg';
+const kOrgLogo = 'org_logo.svg';
+const kPlaceholder = 'placeholder.png';
+
+// Set to false to hide organization logo in splash screen
+const kShowOrgLogo = true;
+```
+
+3. Then rebuild the app to see the changes.
+
+<div style={{display: 'flex', gap: '20px', alignItems: 'flex-start'}}>
+  <img
+    src={useBaseUrl('/img/app/change_app_logo.webp')}
+    alt="Change App Logo"
+    style={{width: '30%', objectFit: 'cover'}}
+  />
+  <img
+    src={useBaseUrl('/img/app/change_splash_and_org_logo.webp')}
+    alt="Change Splash and Logo"
+    style={{width: '30%', objectFit: 'cover'}}
+  />
+</div>
+
+## Customize App Colors
+
+Customize your app's color scheme to match your brand identity. We recommend using your own brand colors instead of the default Elite Quiz colors.
+
+Navigate to `lib/core/config/colors.dart` and update the color constants with your brand colors:
+
+```dart title='lib/core/config/colors.dart'
+/// Light Theme Colors
+const klBackgroundColor = Color(0xffffffff); // White color for containers, cards, lists
+const klCanvasColor = Color(0xcc000000); // Black color for overlays
+const klPageBackgroundColor = Color(0xfff3f7fa); // Main scaffold background color
+const klPrimaryColor = Color(0xffef5388); // Primary branding color
+const klPrimaryTextColor = Color(0xff45536d); // Main text color
+
+/// Additional theme colors available in the file
+```
+
+Save the file and restart your app to see the changes
+
+## Managing System Languages (Translations)
+
+System languages control the interface translations for the admin panel, mobile app, and web application.
+
+You can update, add, and edit app language translations directly from the admin panel without needing to rebuild or redeploy the app and web.
 
 1. Go to your admin panel
-2. Navigate to the System Languages section
+2. Go to the `System Languages` section
 3. Add or edit languages as needed
 
-![Add New Language](/img/app/addNewLanguage.webp)
+![Manage System Languages](/img/panel/manage_system_languages.webp)
 
-![Add New Language 2](/img/app/addNewLanguage2.webp)
+**To modify translations**: Click on the Eye icon in the Operations Column to update or modify the translations (see number 3 in the image).
 
-### Language Management in Admin Panel
+## Managing Quiz Languages
 
-The admin panel provides an interface to manage both system and quiz languages:
+Quiz languages control the content structure of your app, including categories, subcategories, and questions. This system allows you to have completely different content structures for different languages across all quizzes.
 
-1. System Languages: Used for app interface translations
-2. Quiz Languages: Used for quiz content in different languages
+### Key Features
+
+- **Content Separation**: Each language can have its own category structure and questions
+- **Flexible Organization**: Different content for Hindi vs English, or any other language combination
+- **Language Mode Control**: Disable language mode if you only want one language
+
+### Configuration
+
+**To disable language mode** (single language only):
+
+1. Go to Panel > Settings > System Configurations
+2. Disable the Language Mode option
 
 ![Admin Language 1](/img/app/admin-language-1.webp)
 
+**To manage quiz languages**:
+
+1. Navigate to the Languages Section in your admin panel
+2. Configure your desired language structure
+
 ![Admin Language 2](/img/app/admin-language-2.webp)
+
+### Advanced Usage
+
+:::tip Flexible Categorization
+While we refer to this as "language-wise" categorization, you can actually use it for various organizational structures:
+
+- **Classes**: Different content for Class 7 vs Class 10 students
+- **Subjects**: Separate content by academic subjects
+- **Regions**: Location-specific content
+- **Professions**: Career-specific quiz content
+- **Interests**: Interest-based content organization
+
+The possibilities are endless for organizing your quiz content!
+:::
 
 ## Additional Customization Options
 
-### Changing Intro Slider Images
+### Configuration Files
 
-1. Navigate to `assets/images/` directory
-2. Replace the `introSlider1.png`, `introSlider2.png`, etc. files with your own images
+You can modify additional settings and assets from:
 
-### Changing Default Profile Images
+- **`lib/core/config` folder**: Core app configurations
+- **`assets/config/` folder**: Branding assets and resources
 
-1. Navigate to `assets/images/` directory
-2. Replace the profile image files with your own default profile images
+### Admin Panel Settings
 
-### Changing Fonts
+Explore the admin panel for additional customization options:
 
-1. Add your custom fonts to the `assets/fonts/` directory
-2. Update the `pubspec.yaml` file to include your fonts
-3. Update the font family in the theme settings in `main.dart`
+- **System Utilities**: Configure quiz behavior and rules
+- **System Configurations**: Advanced system settings
 
-## Testing Your Customizations
-
-After making customization changes:
-
-1. Run `flutter clean` to clear the build cache
-2. Run `flutter pub get` to ensure all dependencies are updated
-3. Restart your app with `flutter run`
-4. Test on multiple devices to ensure your customizations look good on different screen sizes
-
-Remember to test your app thoroughly after making visual changes to ensure everything displays correctly on different device sizes and orientations.
+Take time to review all available options to fully customize your Elite Quiz experience.

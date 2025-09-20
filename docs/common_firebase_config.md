@@ -53,6 +53,14 @@ To use Phone/OTP Login, your Firebase project must be on the **Blaze** (pay-as-y
 
 ![Screenshot: Enable Auth Methods in Firebase](/img/common/firebase_authentication.webp)
 
+4. **Update Public Settings:** Go to [Project Settings](https://console.firebase.google.com/u/0/project/_/settings/general) and configure your Public Settings. The Public Facing Name appears in verification emails sent to users, so they'll see your Quiz App name instead of your Firebase project name.
+
+![Screenshot: Update Public Settings](/img/common/firebase_update_public_settings.webp)
+
+5. **For Elite Quiz Web users:** Add your website domain to the Authorized Domains list. Enter only the domain name without `https://` or `http://` (e.g., `elitequiz.wrteam.in`).
+
+![Screenshot: Add Authorized Domains for Elite Web](/img/common/firebase_auth_add_authorised_domains.webp)
+
 > **Tip:** To control which sign-in options are visible to your users, use the Elite Quiz admin panel:
 >
 > - Go to `Settings > Authentication Settings`.
@@ -82,6 +90,7 @@ import Video from '@site/src/components/Video';
    ![Screenshot: Select Database Location](/img/common/firestore_create_step2.png)
 
 4. **Set Firestore Security Rules:**
+
    - Go to the **Rules** tab.
    - Delete any existing rules and paste in the following:
 
@@ -99,6 +108,7 @@ import Video from '@site/src/components/Video';
    ![Screenshot: Add Rule in Firestore](/img/common/firestore_rules.webp)
 
 5. **Create an Index for Messaging**
+
    - This is needed for the in-game chat feature.
    - In Firestore, go to the **Indexes** tab.
    - Click **Add Index** and fill in:

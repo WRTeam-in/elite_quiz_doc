@@ -72,6 +72,7 @@ export default {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['dart'],
       },
       docs: {
         sidebar: {
