@@ -9,7 +9,7 @@ export default {
   baseUrl: '/elite_quiz_doc',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
   organizationName: 'WRTeam-in', // Usually your GitHub org/user name.
   projectName: 'elite_quiz_doc', // Usually your repo name.
 
