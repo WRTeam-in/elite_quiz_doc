@@ -8,10 +8,16 @@ export default {
   url: 'https://wrteam-in.github.io',
   baseUrl: '/elite_quiz_doc',
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',
   organizationName: 'WRTeam-in', // Usually your GitHub org/user name.
   projectName: 'elite_quiz_doc', // Usually your repo name.
+
+  // Markdown configuration
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // Add local search plugin with a unique ID to avoid conflicts
   plugins: [
