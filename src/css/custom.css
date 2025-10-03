@@ -399,6 +399,92 @@ button,
   border-radius: var(--radius-md);
   border-left-width: 4px;
   margin: var(--spacing-lg) 0;
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+}
+
+/* Note/Info Admonition */
+.theme-admonition-note {
+  border-left-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.theme-admonition-note .admonition-heading {
+  color: #2563eb;
+}
+
+[data-theme='dark'] .theme-admonition-note {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+[data-theme='dark'] .theme-admonition-note .admonition-heading {
+  color: #60a5fa;
+}
+
+/* Tip/Success Admonition */
+.theme-admonition-tip {
+  border-left-color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.theme-admonition-tip .admonition-heading {
+  color: #059669;
+}
+
+[data-theme='dark'] .theme-admonition-tip {
+  background: rgba(16, 185, 129, 0.15);
+}
+
+[data-theme='dark'] .theme-admonition-tip .admonition-heading {
+  color: #34d399;
+}
+
+/* Warning/Caution Admonition */
+.theme-admonition-warning,
+.theme-admonition-caution {
+  border-left-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.theme-admonition-warning .admonition-heading,
+.theme-admonition-caution .admonition-heading {
+  color: #d97706;
+}
+
+[data-theme='dark'] .theme-admonition-warning,
+[data-theme='dark'] .theme-admonition-caution {
+  background: rgba(245, 158, 11, 0.15);
+}
+
+[data-theme='dark'] .theme-admonition-warning .admonition-heading,
+[data-theme='dark'] .theme-admonition-caution .admonition-heading {
+  color: #fbbf24;
+}
+
+/* Danger/Error Admonition */
+.theme-admonition-danger {
+  border-left-color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.theme-admonition-danger .admonition-heading {
+  color: #dc2626;
+}
+
+[data-theme='dark'] .theme-admonition-danger {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+[data-theme='dark'] .theme-admonition-danger .admonition-heading {
+  color: #f87171;
+}
+
+/* Admonition heading */
+.admonition-heading {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* === TABLES === */
@@ -476,7 +562,6 @@ table tbody tr:hover {
 
 .menu__link--active {
   background: var(--ifm-color-primary);
-  color: white;
   font-weight: 600;
 }
 
