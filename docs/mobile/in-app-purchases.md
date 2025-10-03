@@ -2,16 +2,16 @@
 sidebar_position: 8
 ---
 
-# Configure In-App Purchases
+# Configure In‑App Purchases
 
 ## Overview
 
-Elite Quiz supports
+Elite Quiz supports:
 
-- Purchasing virtual coins with real money through In-App Purchases (IAP)
-- Plus a "Remove Ads" lifetime package with one-time payment.
+- Purchasing virtual coins using in‑app purchases (IAP)
+- A one‑time, lifetime "Remove Ads" non‑consumable purchase
 
-:::warning Prerequisites
+::::warning Prerequisites
 Before proceeding with this guide, please kindly read the [WRTeam Common IAP Documentation](https://wrteam-in.github.io/common_app_doc/GeneralSettings/iap) to understand:
 
 - How to create In-App Purchases in **App Store** and **Play Console**
@@ -19,16 +19,43 @@ Before proceeding with this guide, please kindly read the [WRTeam Common IAP Doc
 - IAP testing procedures and requirements
 - Platform-specific guidelines and restrictions
 
-This foundational knowledge is essential as we'll **_only_** focus on Elite Quiz-specific configuration here.
-:::
+This foundational knowledge is essential because this page focuses only on Elite Quiz–specific configuration.
+::::
 
 :::note
 Subscriptions are not currently supported.
 :::
 
+## Create In‑App Purchases in the Admin Panel
+
+1. Open the Admin Panel and go to `Settings > Coin Store Settings`.
+2. Create your coin packs and the remove‑ads product.
+   - Coin packs are consumable purchases.
+   - Remove Ads is a non‑consumable, lifetime purchase. Only one remove‑ads product is allowed.
+
+Examples:
+
+- 100 Coins (consumable)
+
+  - Name: 100 Coins
+  - Coins: 100
+  - Product ID: `appname_consumable_100_coins` (must be unique and consistent across both stores)
+  - Description: Buy 100 Coins
+  - Image: Select an appropriate icon
+
+- Remove Ads (non‑consumable)
+  - Type: Ads
+  - Pricing: Choose a one‑time price (lifetime entitlement)
+  - Only one Ads‑type product is supported
+
+Notes:
+
+- Items you create here will not appear in the app until you also create matching products in the app stores and complete testing/approval.
+- Create all the packages you want first; you will connect them to store products next.
+
 ## Platform-Specific Configuration
 
-Before creating IAP products, ensure you have completed these platform-specific configurations:
+Before creating IAP products in the App Stores, ensure you have completed these platform-specific configurations:
 
 ### Android Specific
 
@@ -64,6 +91,7 @@ Create identical IAP products in both Google Play Console and Apple App Store Co
 - Use consistent naming, descriptions, and pricing
 - Ensure proper product types (consumable for coins, non-consumable for remove ads)
 - Configure appropriate price tiers for different markets
+- Wait for products to be approved and available for testing
 
 ### Step 3: Testing and Validation
 
@@ -73,10 +101,11 @@ Deploy your app for testing and validate IAP functionality:
 - **iOS Testing**: Deploy to TestFlight for iOS testing
 - **Test User Setup**: Configure license testing for Android and sandbox users for iOS
 - **Purchase Flow Testing**: Verify complete purchase workflows work correctly
+- **Entitlement Validation**: Confirm coins are credited and remove‑ads entitlement persists across reinstalls
 
-:::warning Testing Requirements
+::::warning Testing Requirements
 IAP testing requires your app to be published in testing tracks (Google Play) or TestFlight (iOS). Local development testing of purchases is not possible without proper app store distribution.
-:::
+::::
 
 ---
 
@@ -86,7 +115,8 @@ IAP testing requires your app to be published in testing tracks (Google Play) or
 - **Testing Timeline**: Allow extra time for app store review processes during testing phases
 - **Purchase Validation**: Elite Quiz includes server-side purchase validation for security
 - **Regional Pricing**: Consider local market pricing when setting IAP costs
+- **Data Propagation**: New or updated IAPs can take time to propagate; if a product does not appear, wait and retry
 
-:::tip Success Factors
+::::tip Success Factors
 Successful IAP implementation requires careful attention to product ID consistency, thorough testing across both platforms, and proper server-side validation. Take time to test thoroughly before production release.
-:::
+::::
