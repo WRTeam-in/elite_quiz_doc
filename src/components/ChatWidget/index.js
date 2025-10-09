@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { createChat } from '@n8n/chat';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import '@n8n/chat/style.css';
-// import './custom-chat-styles.css';
+import './custom-chat-styles.css';
 
 export default function ChatWidget() {
-  const { siteConfig: { customFields } } = useDocusaurusContext();
+  const {
+    siteConfig: { customFields },
+  } = useDocusaurusContext();
 
   useEffect(() => {
     // Initialize n8n chat widget
@@ -15,6 +17,7 @@ export default function ChatWidget() {
         method: 'POST',
         headers: {},
       },
+      target: '#n8n-chat',
       mode: 'window',
       loadPreviousSession: true,
       showWelcomeScreen: false,
@@ -24,8 +27,8 @@ export default function ChatWidget() {
       ],
       i18n: {
         en: {
-          title: 'Elite Quiz Support 💬',
-          subtitle: 'Ask me anything about Elite Quiz setup and features',
+          title: '',
+          subtitle: '',
           footer: '',
           getStarted: 'New Conversation',
           inputPlaceholder: 'Type your question...',
@@ -35,5 +38,5 @@ export default function ChatWidget() {
     });
   }, []);
 
-  return null;
+  return <div></div>;
 }
