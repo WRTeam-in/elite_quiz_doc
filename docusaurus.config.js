@@ -1,4 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').Config} */
@@ -12,6 +15,11 @@ export default {
   organizationName: 'WRTeam-in', // Usually your GitHub org/user name.
   projectName: 'elite_quiz_doc', // Usually your repo name.
 
+  // Custom fields for environment variables
+  customFields: {
+    n8nChatWebhookUrl: process.env.N8N_CHAT_WEBHOOK_URL || '',
+  },
+
   // Markdown configuration
   markdown: {
     hooks: {
@@ -24,10 +32,10 @@ export default {
     require.resolve('@easyops-cn/docusaurus-search-local'),
 
     [
-      '@docusaurus/plugin-google-analytics',
+      '@docusaurus/plugin-google-gtag',
       {
-        trackingID: 'G-CS432E2TJ6', // Replace with your GA4 ID
-        anonymizeIP: true, // Optional for privacy compliance (GDPR)
+        trackingID: 'G-CS432E2TJ6',
+        anonymizeIP: true,
       },
     ],
   ],

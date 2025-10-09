@@ -27,6 +27,8 @@ jobs:
         run: bun install
 
       - name: Build website
+        env:
+          N8N_CHAT_WEBHOOK_URL: ${{ secrets.N8N_CHAT_WEBHOOK_URL }}
         run: bun run build
 
       - name: Deploy to GitHub Pages
