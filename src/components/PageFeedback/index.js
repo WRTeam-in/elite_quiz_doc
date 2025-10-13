@@ -237,7 +237,10 @@ export default function PageFeedback() {
               </button>
               <button
                 type="button"
-                onClick={() => setIsSubmitted(true)}
+                onClick={() => {
+                  setPreviousFeedback({ submitted: true });
+                  setIsSubmitted(true);
+                }}
                 className={styles.skipButton}
               >
                 Skip
