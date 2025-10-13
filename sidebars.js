@@ -68,6 +68,7 @@ export default {
         },
         'mobile/deployment',
         'mobile/update',
+        'mobile/16kb-page-size',
         'mobile/faq',
       ],
     },
