@@ -6,7 +6,7 @@ import './custom-chat-styles.css';
 
 export default function ChatWidget() {
   const {
-    siteConfig: { customFields },
+    siteConfig: { title, customFields },
   } = useDocusaurusContext();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function ChatWidget() {
       showWelcomeScreen: false,
       initialMessages: [
         'Hi there! 👋',
-        'Welcome to Elite Quiz Documentation. How can I help you today?',
+        `Welcome to ${title}. How can I help you today?`,
       ],
       i18n: {
         en: {
@@ -36,7 +36,7 @@ export default function ChatWidget() {
       },
       enableStreaming: false,
     });
-  }, []);
+  }, [customFields.n8nChatWebhookUrl, title]);
 
   return <div></div>;
 }

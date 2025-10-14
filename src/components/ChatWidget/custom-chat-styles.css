@@ -12,30 +12,40 @@
 
   /* === SURFACE COLORS === */
   /* Background colors that adapt to theme */
-  --chat--color-white: var(--ifm-background-color); /* Main page background */
-  --chat--color-light: var(--ifm-background-surface-color); /* Cards/surfaces */
-  --chat--color-secondary: var(--surface-secondary); /* Secondary surfaces */
-  --chat--color-light-shade-50: var(--surface-tertiary); /* Tertiary surfaces */
-  --chat--color-secondary-shade-50: var(--ifm-color-emphasis-200); /* Borders */
+  --chat--color-white: var(--ifm-background-color);
+  /* Main page background */
+  --chat--color-light: var(--ifm-background-surface-color);
+  /* Cards/surfaces */
+  --chat--color-secondary: var(--ifm-background-surface-color);
+  /* Secondary surfaces */
+  --chat--color-light-shade-50: var(--ifm-color-emphasis-100);
+  /* Tertiary surfaces */
+  --chat--color-secondary-shade-50: var(--ifm-color-emphasis-200);
+  /* Borders */
 
   /* === TEXT COLORS === */
   /* Text colors that adapt to theme */
-  --chat--color-dark: var(--ifm-font-color-base); /* Primary text */
-  --chat--color-medium: var(--ifm-font-color-secondary); /* Secondary text */
-  --chat--color-disabled: var(--ifm-color-emphasis-600); /* Disabled text */
-  --chat--color-typing: var(--ifm-font-color-secondary); /* Typing indicator */
+  --chat--color-dark: var(--ifm-font-color-base);
+  /* Primary text */
+  --chat--color-medium: var(--ifm-font-color-secondary);
+  /* Secondary text */
+  --chat--color-disabled: var(--ifm-color-emphasis-600);
+  /* Disabled text */
+  --chat--color-typing: var(--ifm-font-color-secondary);
+  /* Typing indicator */
 
   /* === LAYOUT & SPACING === */
-  --chat--spacing: var(--spacing-md);
-  --chat--border-radius: var(--radius-md);
-  --chat--transition-duration: var(--transition-fast);
+  --chat--spacing: 1rem;
+  --chat--border-radius: 0.5rem;
+  --chat--transition-duration: 200ms;
 
   /* === WINDOW DIMENSIONS === */
   --chat--window--width: 600px;
   --chat--window--height: 800px;
 
   /* === HEADER STYLES === */
-  --chat--header-height: 0; /* Hide header or set to 'auto' to show */
+  --chat--header-height: 0;
+  /* Hide header or set to 'auto' to show */
   --chat--header--padding: 0;
   --chat--header--background: var(--ifm-background-surface-color);
   --chat--header--color: var(--ifm-font-color-base);
@@ -49,10 +59,10 @@
   --chat--textarea--height: 50px;
 
   /* === MESSAGE STYLES === */
-  --chat--message--font-size: var(--font-size-base);
-  --chat--message--padding: var(--spacing-md);
-  --chat--message--border-radius: var(--radius-xl);
-  --chat--message-line-height: var(--line-height-relaxed);
+  --chat--message--font-size: 1rem;
+  --chat--message--padding: 1rem;
+  --chat--message--border-radius: 1rem;
+  --chat--message-line-height: 1.6;
 
   /* Bot messages - lighter background */
   --chat--message--bot--background: var(--ifm-background-surface-color);
@@ -73,21 +83,21 @@
   --chat--toggle--active--background: var(--ifm-color-primary-darker);
   --chat--toggle--color: #ffffff;
   --chat--toggle--size: 64px;
-  --chat--toggle--shadow: var(--shadow-primary);
+  --chat--toggle--shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* === DARK MODE OVERRIDES === */
 [data-theme='dark'] {
   /* Surface colors - using dark theme surfaces */
-  --chat--color-white: var(--ifm-background-color); /* #121212 */
-  --chat--color-light: var(--ifm-background-surface-color); /* #1a1a1a */
-  --chat--color-secondary: var(--surface-secondary); /* #222222 */
-  --chat--color-light-shade-50: var(--surface-tertiary); /* #2a2a2a */
+  --chat--color-white: var(--ifm-background-color);
+  --chat--color-light: var(--ifm-background-surface-color);
+  --chat--color-secondary: var(--ifm-background-surface-color);
+  --chat--color-light-shade-50: var(--ifm-color-emphasis-200);
   --chat--color-secondary-shade-50: var(--ifm-color-emphasis-300);
 
   /* Text colors - better contrast in dark mode */
-  --chat--color-dark: var(--ifm-font-color-base); /* #e5e5e5 */
-  --chat--color-medium: var(--ifm-font-color-secondary); /* #b0b0b0 */
+  --chat--color-dark: var(--ifm-font-color-base);
+  --chat--color-medium: var(--ifm-font-color-secondary);
   --chat--color-disabled: var(--ifm-color-emphasis-600);
   --chat--color-typing: var(--ifm-font-color-secondary);
 
@@ -95,21 +105,21 @@
   --chat--header--border-bottom: 1px solid var(--ifm-color-emphasis-300);
 
   /* Bot messages in dark mode */
-  --chat--message--bot--background: var(--surface-secondary);
+  --chat--message--bot--background: var(--ifm-color-emphasis-100);
   --chat--message--bot--border: 1px solid var(--ifm-color-emphasis-300);
 
   /* Code blocks in dark mode */
   --chat--message--pre--background: var(--ifm-color-emphasis-200);
 
   /* Toggle button with glow effect in dark mode */
-  --chat--toggle--shadow: var(--shadow-primary);
+  --chat--toggle--shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.4);
 
   /* Input field styles for dark mode */
-  --chat--input--background: var(--surface-secondary);
+  --chat--input--background: var(--ifm-color-emphasis-100);
   --chat--input--text-color: var(--ifm-font-color-base);
 
   /* Send button in dark mode */
-  --chat--input--send--button--background: var(--surface-tertiary);
+  --chat--input--send--button--background: var(--ifm-color-emphasis-200);
   --chat--input--send--button--color: var(--ifm-color-primary);
   --chat--input--send--button--background-hover: var(--ifm-color-primary);
   --chat--input--send--button--color-hover: #ffffff;
@@ -124,18 +134,22 @@
 
 .chat-input {
   border-top: none !important;
-  padding-top: var(--spacing-sm) !important;
+  padding-top: 0.5rem !important;
 }
 
 /* Input textarea specific styles */
 .chat-inputs textarea {
-  background: var(--chat--input--background) !important;
-  color: var(--chat--input--text-color) !important;
+  background: var(--chat--input--background, var(--ifm-background-surface-color)) !important;
+  color: var(--chat--input--text-color, var(--ifm-font-color-base)) !important;
   border: none !important;
-  overflow-y: hidden !important; /* Hide scrollbar */
-  border-radius: var(--radius-lg) !important; /* Add rounded corners */
-  margin-left: var(--spacing-sm) !important; /* Add margin on left */
-  margin-bottom: var(--spacing-sm) !important; /* Add margin on left */
+  overflow-y: hidden !important;
+  /* Hide scrollbar */
+  border-radius: 0.75rem !important;
+  /* Add rounded corners */
+  margin-left: 0.5rem !important;
+  /* Add margin on left */
+  margin-bottom: 0.5rem !important;
+  /* Add margin on bottom */
 }
 
 .chat-inputs textarea::placeholder {
@@ -152,8 +166,8 @@
 .chat-input-send-button {
   background: transparent !important;
   color: var(--ifm-color-primary) !important;
-  transition: all var(--transition-fast) !important;
-  margin-bottom: var(--spacing-sm) !important; /* Add margin on left */
+  transition: all 200ms !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .chat-input-send-button:hover:not([disabled]) {
@@ -168,7 +182,7 @@
 
 /* Dark mode specific overrides */
 [data-theme='dark'] .chat-inputs textarea {
-  background: var(--surface-secondary) !important;
+  background: var(--ifm-color-emphasis-100) !important;
   color: var(--ifm-font-color-base) !important;
 }
 
