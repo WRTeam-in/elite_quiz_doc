@@ -22,10 +22,13 @@ export default {
 
   // Markdown configuration
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
   },
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   // Add local search plugin with a unique ID to avoid conflicts
   plugins: [
@@ -97,6 +100,9 @@ export default {
         defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: true,
+      },
+      mermaid: {
+        theme: { light: 'default', dark: 'dark' },
       },
     }),
 };
