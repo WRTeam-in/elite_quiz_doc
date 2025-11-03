@@ -32,7 +32,7 @@ function QuickLinks() {
             <h3>Admin Panel</h3>
             <p>Manage your quiz platform with our comprehensive admin panel</p>
           </Link>
-          <Link className={styles.quickLinkCard} to="/web/setup-nodejs">
+          <Link className={styles.quickLinkCard} to="/web/web-setup-overview">
             <h3>Web Application</h3>
             <p>Explore the web version of Elite Quiz and its features</p>
           </Link>

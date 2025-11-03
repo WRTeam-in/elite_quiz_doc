@@ -42,8 +42,8 @@ export default {
       type: 'category',
       label: 'Website',
       items: [
-        'web/setup-nodejs',
         'web/web-setup-overview',
+        'web/setup-nodejs',
         'web/run-project',
         'web/firebase-integration',
         'web/web-customization',
