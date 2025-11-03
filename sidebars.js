@@ -23,6 +23,14 @@ export default {
     },
     {
       type: 'category',
+      label: 'Features',
+      items: [
+        'features/overview',
+        'features/coin-distribution',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Admin Panel',
       items: [
         'admin/overview',
