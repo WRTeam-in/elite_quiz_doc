@@ -22,22 +22,10 @@ Note down the ad unit IDs for each ad type as you'll need them for configuration
 
 ## Configuring Ad IDs in the App
 
-### 1. Update Constants File
+### 1. Add Ad Ids in the admin panel
 
-1. Open the file `lib/utils/constant.dart` in your Flutter project
-2. Look for the ad-related constants and update them with your AdMob IDs:
-
-```dart
-// Android Ad IDs
-static const String androidBannerId = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx";
-static const String androidInterstitialId = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx";
-static const String androidRewardedId = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx";
-
-// iOS Ad IDs
-static const String iosBannerId = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx";
-static const String iosInterstitialId = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx";
-static const String iosRewardedId = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx";
-```
+1. Open the admin panel > Settings > Ads Settings
+2. Select the Google Admob and add all the ad ids.
 
 ![Add Google Ad IDs](/img/app/add-googe-ad-ids.webp)
 
