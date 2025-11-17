@@ -23,7 +23,7 @@ To help you get started quickly, we have created a video tutorial that guides yo
    allowfullscreen>
    </iframe>
 
-## How to Configure Firebase
+## How to Configure Firebase  
 
 1. Create a firebase project in your account:
 
@@ -56,7 +56,12 @@ To help you get started quickly, we have created a video tutorial that guides yo
 
    ![Domain Configuration](../../static/img/web/firebase-configuration.png)
 
-8. You have successfully connected your Web application to your firebase project.
+8. To connect you website with Google analitics, Copy this measurementId and paste it in .env file in the website code 
+
+![admin panel measurementId](../../static/img/web/firebaseMeasuremetid.png)
+![measurementId paste in .env file in code ](../../static/img/web/envFirebase.png)
+
+9. You have successfully connected your Web application to your firebase project.
 
 ## Why Firebase Is Important
 
