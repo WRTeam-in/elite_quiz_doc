@@ -61,7 +61,10 @@ To help you get started quickly, we have created a video tutorial that guides yo
 ![admin panel measurementId](../../static/img/web/firebaseMeasuremetid.png)
 ![measurementId paste in .env file in code ](../../static/img/web/envFirebase.png)
 
-9. You have successfully connected your Web application to your firebase project.
+9. Log in to [Google Analytics](https://marketingplatform.google.com/about/analytics/) using the same account you used to create the Firebase project.
+![measurementId paste in .env file in code ](../../static/img/web/analycs_web.png)
+
+10. You have successfully connected your Web application to your firebase project.
 
 ## Why Firebase Is Important
 
