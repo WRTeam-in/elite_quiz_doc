@@ -37,8 +37,8 @@ If you need additional help, our dedicated support team is available through mul
 
 #### Mobile App Support
 
-- **Contact**: Jay Parmar
-- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAJ7VEK0EAhWzZTQE)
+- **Contact**: Priyansh Parmar
+- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAog3ZODgiEtZhlQM)
 - **Scope**: Mobile app setup, features, and troubleshooting
 
 #### Email Support
