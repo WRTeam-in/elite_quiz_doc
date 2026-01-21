@@ -9,10 +9,10 @@ sidebar_position: 8
 Elite Quiz supports:
 
 - Purchasing virtual coins using in‑app purchases (IAP)
-- A one‑time, lifetime "Remove Ads" non‑consumable purchase
+- A one‑time, lifetime "Remove Ads" purchase
 
-::::warning Prerequisites
-Before proceeding with this guide, please kindly read the [WRTeam Common IAP Documentation](https://wrteam-in.github.io/common_app_doc/GeneralSettings/iap) to understand:
+:::warning Prerequisites
+Before proceeding with this guide, please read the [WRTeam Common IAP Documentation](https://wrteam-in.github.io/common_app_doc/GeneralSettings/iap) to understand:
 
 - How to create In-App Purchases in **App Store** and **Play Console**
 - Different types of IAP (consumable, non-consumable)
@@ -20,15 +20,28 @@ Before proceeding with this guide, please kindly read the [WRTeam Common IAP Doc
 - Platform-specific guidelines and restrictions
 
 This foundational knowledge is essential because this page focuses only on Elite Quiz–specific configuration.
-::::
+:::
 
 :::note
 Subscriptions are not currently supported.
 :::
 
+<details>
+  <summary><strong>Quick Start Checklist (For Experienced Users)</strong></summary>
+
+- [ ] Create IAP products in Admin Panel (`Settings > Coin Store Settings`)
+- [ ] **Android**: Add package name to Admin Panel
+- [ ] **Android**: Add Firebase service account to Play Console with admin permissions
+- [ ] **Android**: Enable Google Play Android Developer API
+- [ ] **iOS**: Add App Store Connect shared secret to Admin Panel
+- [ ] Create matching products in Play Console and App Store Connect with identical IDs
+- [ ] Upload app to testing tracks and test purchases
+
+</details>
+
 ## How In-App Purchases Work
 
-Understanding the IAP flow helps ensure proper setup and troubleshooting. Here's the complete purchase lifecycle:
+Understanding how IAP works helps you set up correctly and fix problems. Here's what happens when a user buys coins:
 
 ```mermaid
 sequenceDiagram
@@ -67,104 +80,257 @@ sequenceDiagram
 
 ### Key Security Features
 
-- **Server-Side Verification**: All purchases are validated with the respective app stores before crediting coins
-- **Secure Coin Crediting**: Coins are added to user accounts on the server side, preventing client-side manipulation
-- **Receipt Validation**: Every purchase receipt is verified with Google Play or Apple's servers before acceptance
+- **Server-Side Verification**: All purchases are validated with the app stores before giving coins to users
+- **Secure Coin Crediting**: Coins are added on the server side, so users cannot cheat the system
+- **Receipt Validation**: Every purchase is verified with Google Play or Apple's servers before acceptance
 
-## Create In‑App Purchases in the Admin Panel
+---
 
-1. Open the Admin Panel and go to `Settings > Coin Store Settings`.
-2. Create your coin packs and the remove‑ads product.
-   - Coin packs are consumable purchases.
-   - Remove Ads is a non‑consumable, lifetime purchase. Only one remove‑ads product is allowed.
+## Step 1: Create Products in Admin Panel
 
-Examples:
+1. Open the Admin Panel and go to `Settings > Coin Store Settings`
+2. Create your coin packs and remove-ads product
 
-- 100 Coins (consumable)
+**Product Types:**
 
-  - Name: 100 Coins
-  - Coins: 100
-  - Product ID: `appname_consumable_100_coins` (must be unique and consistent across both stores)
-  - Description: Buy 100 Coins
-  - Image: Select an appropriate icon
+- **Coin Packs**: Consumable purchases (users can buy multiple times)
+- **Remove Ads**: Non-consumable, lifetime purchase (users buy once, keep forever)
 
-- Remove Ads (non‑consumable)
-  - Type: Ads
-  - Pricing: Choose a one‑time price (lifetime entitlement)
-  - Only one Ads‑type product is supported
+:::note Pricing
+You will set the actual prices later in Google Play Console and App Store Connect, not in the Admin Panel. The Admin Panel only defines what users receive (coins or ad removal).
+:::
 
-Notes:
+### Example: 100 Coins Pack (Consumable)
 
-- Items you create here will not appear in the app until you also create matching products in the app stores and complete testing/approval.
-- Create all the packages you want first; you will connect them to store products next.
+- **Name**: 100 Coins
+- **Coins**: 100
+- **Product ID**: `elitequiz_consumable_100_coins`
+  - Replace `elitequiz` with your app name
+  - Must be **exactly the same** in Admin Panel, Play Console, and App Store Connect
+  - Use only lowercase letters, numbers, and underscores
+- **Description**: Buy 100 Coins
+- **Image**: Upload an icon for this product
 
-## Platform-Specific Configuration
+### Example: Remove Ads (Non-Consumable)
 
-Before creating IAP products in the App Stores, ensure you have completed these platform-specific configurations:
+- **Type**: Ads
+- **Product ID**: `elitequiz_remove_ads`
+  - Replace `elitequiz` with your app name
+  - Must be **exactly the same** across all platforms
+- **Description**: Remove all advertisements
+- **Note**: You can only create one Remove Ads product
 
-### Android Specific
+:::warning Important
+Products you create in the Admin Panel will **not** appear in your app until you also create matching products in Google Play Console and App Store Connect with **identical Product IDs**.
+:::
 
-#### Step 1: Add your Android package name in the Admin Panel
+---
 
-- Go to your `Admin Panel > Settings > In App Settings`
-- Add your android app package name in
+## Step 2: Platform-Specific Configuration
 
-#### Step 2: Add your Firebase service account email to Google Play Console for purchase validation
+Before creating products in app stores, complete these platform-specific setup steps:
 
-#### Step 3: Enable "Google Play Android Developer API" in Google Play Console
+### Android Configuration
 
-### iOS Specific
+#### Step 1: Add Your Android Package Name
 
-#### Step 1: Create and add the shared secret from App Store Connect to your Admin Panel
+1. Go to `Admin Panel > Settings > In-App Settings`
+2. Enter your Android app package name in the `App Package Name` field
+   - Example: `com.yourcompany.elitequiz`
+   - This must match the package name in your Android app
 
-## Implementation Workflow
+![Add Android Package name in In-App Settings](/img/panel/panel_iap_add_package_name.webp)
 
-### Step 1: Create IAP Products in Admin Panel
+#### Step 2: Connect Firebase to Play Console
 
-Configure your in-app purchase products in the Elite Quiz Admin Panel:
+This allows the Admin Panel to verify purchases with Google Play.
 
-- Set up coin packages with appropriate quantities and pricing
-- Configure the "Remove Ads" non-consumable product
-- Define product IDs that will be used across all platforms
-- Test the admin panel IAP configuration
+1. In Admin Panel, go to `Settings > In-App Settings`
+2. Copy the **Firebase Client Email** (shown in the settings)
 
-### Step 2: Create Matching Products in App Stores
+![Copy Client email from In-App Settings](/img/panel/panel_iap_copy_client_email.webp)
 
-Create identical IAP products in both Google Play Console and Apple App Store Connect:
+3. Open [Google Play Console](https://play.google.com/console/u/0/developers/_/app-list)
+4. Go to `Users and permissions`
+5. Click `Invite new users`
+6. Paste the Firebase Client Email you copied
+7. In the `Permissions` section, click `Add App` under the `App permissions` tab
+8. Select your app and click `Apply`
+9. Select `Admin (all permissions)` and click `Apply`
+10. Click `Invite user`
 
-- **Product IDs must match exactly** between platforms and admin panel
-- Use consistent naming, descriptions, and pricing
-- Ensure proper product types (consumable for coins, non-consumable for remove ads)
-- Configure appropriate price tiers for different markets
-- Wait for products to be approved and available for testing
+**Watch the video guide:**
 
-### Step 3: Testing and Validation
+<iframe
+  width="100%"
+  height="500"
+  style={{ borderRadius: '10px', border: 'none' }}
+  src="https://www.youtube.com/embed/vfIiAUhwXrY"
+  title="Add Firebase Client Email to Play Console"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen>
+</iframe>
 
-Deploy your app for testing and validate IAP functionality:
+#### ⏱️ Important: Wait Time Required
 
-- **Android Testing**: Use closed/open/internal testing tracks on Google Play
-- **iOS Testing**: Deploy to TestFlight for iOS testing
-- **Test User Setup**: Configure license testing for Android and sandbox users for iOS
-- **Purchase Flow Testing**: Verify complete purchase workflows work correctly
-- **Entitlement Validation**: Confirm coins are credited and remove‑ads entitlement persists across reinstalls
+Google Play needs time to process these permission changes. This is normal.
 
-::::warning Testing Requirements
-IAP testing requires your app to be published in testing tracks (Google Play) or TestFlight (iOS). Local development testing of purchases is not possible without proper app store distribution.
-::::
+- **Minimum wait**: 2-4 hours
+- **Maximum wait**: Up to 24 hours (in rare cases)
+
+If IAP doesn't work immediately after setup:
+
+1. Wait 2-4 hours, then test again
+2. If still not working, wait up to 24 hours
+3. Clear your app cache and reinstall before testing
+
+Most setups work within 4 hours.
+
+#### Step 3: Enable Google Play Android Developer API
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com)
+2. Make sure the correct Firebase project is selected (check the top dropdown)
+3. Click this link to enable the API: [Enable Google Play Android Developer API](https://console.cloud.google.com/marketplace/product/google/androidpublisher.googleapis.com)
+4. Click the `Enable` button
+
+![Enable Google Play Android Developer API](/img/panel/google_console_verify_play_android_developer_api_is_enabled.webp)
+
+#### Step 4: Upload App for Testing
+
+1. Upload your app to Google Play Console in any testing track (Internal, Closed, or Open Testing)
+2. Wait for Google to review your app (this usually takes a few hours)
+3. Once reviewed, add your email to `License Testing` to test purchases without paying real money
+
+---
+
+### iOS Configuration
+
+#### Step 1: Get the Shared Secret from App Store Connect
+
+The shared secret allows the Admin Panel to verify iOS purchases with Apple.
+
+1. Open [App Store Connect](https://appstoreconnect.apple.com)
+2. Click on your app
+3. Go to `App Information` (in the left sidebar under `General`)
+4. Scroll down to the `App-Specific Shared Secret` section
+5. Click `Manage` or `Generate` if you don't have one yet
+6. Copy the shared secret code
+
+:::warning Use App-Specific Shared Secret
+Make sure you copy the **App-Specific Shared Secret**, not the Master Shared Secret. The app-specific version is more secure.
+:::
+
+#### Step 2: Add Shared Secret to Admin Panel
+
+1. Go to `Admin Panel > Settings > In-App Settings`
+2. Find the `iOS Shared Secret` field
+3. Paste the shared secret you copied from App Store Connect
+4. Click `Save`
+
+:::tip Double-Check for Errors
+Make sure there are no extra spaces at the beginning or end of the shared secret. Extra spaces will cause verification to fail.
+:::
+
+#### Step 3: Upload App to TestFlight
+
+1. Build your iOS app in Xcode
+2. Upload to App Store Connect
+3. Submit to TestFlight
+4. Wait for Apple to process your build (usually 30-60 minutes)
+5. Add testers in TestFlight to test purchases
+
+:::warning Testing Requirements
+In-app purchase testing requires your app to be distributed through official channels:
+
+- **Android**: App must be uploaded to Google Play Console in a testing track
+- **iOS**: App must be distributed via TestFlight
+
+You **cannot** test IAP in local development builds or emulators. You must use real devices with apps installed from the stores.
+:::
+
+---
+
+## Step 3: Create Products in App Stores
+
+Now create matching products in Google Play Console and App Store Connect.
+
+:::tip Product ID Consistency
+The most important rule: **Product IDs must be exactly identical** across:
+
+- Admin Panel
+- Google Play Console
+- App Store Connect
+
+Product IDs are case-sensitive. `elitequiz_100_coins` is different from `EliteQuiz_100_Coins`.
+:::
+
+### Create Products in Google Play Console
+
+1. Open [Google Play Console](https://play.google.com/console)
+2. Select your app
+3. Go to `Monetize > In-app products`
+4. Click `Create product`
+5. Enter the **exact same Product ID** you used in Admin Panel
+6. Set your price (this is where you set the actual price users will pay)
+7. Add title, description, and save
+8. Click `Activate` to make the product available
+
+### Create Products in App Store Connect
+
+1. Open [App Store Connect](https://appstoreconnect.apple.com)
+2. Select your app
+3. Go to `Features > In-App Purchases`
+4. Click `+` to create a new product
+5. Choose type: `Consumable` (for coins) or `Non-Consumable` (for remove ads)
+6. Enter the **exact same Product ID** you used in Admin Panel
+7. Set your price tier (this is where you set the actual price users will pay)
+8. Add reference name, display name, and description
+9. Click `Save`
+
+---
+
+## Step 4: Test Your Setup
+
+### Android Testing
+
+1. **Add Test Account**:
+
+   - In Play Console, go to `Setup > License testing`
+   - Add your Gmail address to the list of license testers
+
+2. **Install and Test**:
+   - Install the app from the testing track on a real Android device
+   - Sign in with your test Gmail account
+   - Go to the coin store in the app
+   - Try purchasing a product
+   - You'll see "Test purchase" and won't be charged real money
+
+### iOS Testing
+
+1. **Create Sandbox Account**:
+
+   - In App Store Connect, go to `Users and Access > Sandbox Testers`
+   - Click `+` and create a test account with a unique email
+
+2. **Test on Device**:
+   - On your iOS device, sign out of your regular Apple ID
+   - Install the app from TestFlight
+   - When you try to purchase, iOS will ask you to sign in
+   - Sign in with your sandbox tester account
+   - Complete the purchase (it's free in sandbox mode)
+
+:::warning Use Real Devices
+Always test on real devices (real Android phone or iPhone). IAP **does not work** on emulators or simulators.
+:::
 
 ---
 
 ## Important Notes
 
 - **Product ID Consistency**: All product IDs must be identical across Admin Panel, Google Play, and App Store
-- **Testing Timeline**: Allow extra time for app store review processes during testing phases
+- **Testing Timeline**: Allow time for app store review processes during testing (2-4 hours for Android permissions, 30-60 minutes for iOS builds)
 - **Purchase Validation**: Elite Quiz includes server-side purchase validation for security
-- **Regional Pricing**: Consider local market pricing when setting IAP costs
-- **Data Propagation**: New or updated IAPs can take time to propagate; if a product does not appear, wait and retry
-
-::::tip Success Factors
-Successful IAP implementation requires careful attention to product ID consistency, thorough testing across both platforms, and proper server-side validation. Take time to test thoroughly before production release.
-::::
+- **Data Propagation**: New or updated products can take 1-2 hours to appear in apps; if a product doesn't appear, wait and try again
 
 ---
 
@@ -176,30 +342,31 @@ Successful IAP implementation requires careful attention to product ID consisten
 
 This is usually caused by one of these issues:
 
-1. **Product ID Mismatch**: The product IDs in Admin Panel don't exactly match those in App Store Connect/Play Console
+1. **Product ID Mismatch**: The Product IDs don't match exactly
 
-   - Solution: Verify IDs are identical (case-sensitive) across all platforms
+   - **Solution**: Check that Product IDs are identical (including capital/lowercase letters) in Admin Panel, Play Console, and App Store Connect
 
 2. **Products Not Approved**: Store products are still in draft or pending review
 
-   - Solution: Ensure products are approved and available for testing/production
+   - **Solution**: Make sure products are approved and active in both app stores
 
-3. **App Not Properly Signed**: Using wrong build configuration or signing certificate
+3. **App Not Properly Signed**: Using the wrong build or certificate
 
-   - Solution: For Android, use the same signing key as your Play Console app. For iOS, ensure proper provisioning profiles
+   - **Solution (Android)**: Use the same signing key as your Play Console app
+   - **Solution (iOS)**: Make sure you're using the correct provisioning profile
 
-4. **Propagation Delay**: Recent changes haven't propagated through store systems
-   - Solution: Wait 1-2 hours and retry, or clear app data and reinstall
+4. **Store Delay**: Recent changes take time to update
+   - **Solution**: Wait 1-2 hours, then clear app data and reinstall
 
 #### Do I need to create the same products three times?
 
-Yes, but they serve different purposes:
+Yes, you create products in three places, but each serves a different purpose:
 
-1. **Admin Panel**: Defines the products and their reward values (coins, ad removal)
-2. **Google Play Console**: Handles Android payment processing and pricing
-3. **App Store Connect**: Handles iOS payment processing and pricing
+1. **Admin Panel**: Defines what users get (100 coins, remove ads, etc.)
+2. **Google Play Console**: Handles Android payments and sets Android prices
+3. **App Store Connect**: Handles iOS payments and sets iOS prices
 
-The **product IDs must be identical** across all three platforms for the system to work correctly.
+The **Product ID must be identical** in all three places so the system knows they're the same product.
 
 ### Testing
 
@@ -207,92 +374,62 @@ The **product IDs must be identical** across all three platforms for the system 
 
 **Android**:
 
-- Add test accounts in Google Play Console under "License testing"
-- Use internal testing, closed testing, or open testing tracks
-- Test users will see a "Test purchase" label and won't be charged
+- Add your email to "License testing" in Play Console
+- Install from a testing track (Internal/Closed/Open Testing)
+- When you purchase, you'll see "Test purchase" and won't be charged
 
 **iOS**:
 
-- Create sandbox tester accounts in App Store Connect
-- Sign out of your real Apple ID on the device
-- When prompted during purchase, sign in with sandbox account
-- Sandbox purchases are free and can be repeated
+- Create a sandbox tester account in App Store Connect
+- Sign out of your real Apple ID on your device
+- Install from TestFlight
+- When purchasing, sign in with the sandbox account
+- Sandbox purchases are free
 
-:::warning
-Always test IAP on real devices, not simulators/emulators. IAP testing requires actual app store connectivity.
+:::warning Test on Real Devices
+IAP testing **only works on real devices**, not emulators or simulators. You need actual app store connectivity.
 :::
 
 #### Can I test IAP locally during development?
 
 No. IAP testing requires:
 
-- App to be uploaded to app stores (even in testing tracks)
-- Proper signing and provisioning
-- Test accounts configured in respective store consoles
+- App uploaded to app stores (even in testing tracks)
+- Proper signing and certificates
+- Test accounts configured in app store consoles
 
-Local development builds cannot process real or test payments.
+Local development builds cannot process purchases (real or test).
 
 ### Troubleshooting Purchases
 
 #### User completed payment but didn't receive coins. What happened?
 
-This typically indicates a verification failure. Check these in order:
+This usually means the purchase verification failed. Check these in order:
 
-1. **Platform-Specific Configuration**
+1. **Check Platform Configuration**:
 
-   - **Android**: Verify Firebase service account email is added to Play Console with proper permissions
-   - **Android**: Ensure "Google Play Android Developer API" is enabled
-   - **iOS**: Verify the shared secret from App Store Connect is correctly added to Admin Panel
+   - **Android**: Is Firebase service account email added to Play Console with admin permissions?
+   - **Android**: Is "Google Play Android Developer API" enabled in Google Cloud?
+   - **iOS**: Is the shared secret correctly added to Admin Panel?
 
-2. **Network Issues**: Verification request to Admin Panel may have failed
+2. **Check Network Connection**:
 
-   - Check server logs for verification requests
-   - Ensure Admin Panel is accessible from user's network
+   - The Admin Panel must be able to connect to the internet to verify purchases
+   - Check Admin Panel server logs for errors
 
-3. **Receipt Validation Failure**: Admin Panel couldn't validate receipt with store
+3. **Check Receipt Validation**:
+   - Look in Admin Panel logs for validation errors
+   - Make sure API credentials are correct
 
-   - Verify platform-specific API credentials are correct
-   - Check Admin Panel logs for validation errors
-
-4. **Purchase Already Processed**: Duplicate receipt submission
-   - Stores may resend receipts; Admin Panel should handle duplicates gracefully
-
-:::tip Recovery
-Most IAP libraries have purchase restoration features. Users can try:
-
-1. Force-close and restart the app
-2. Use "Restore Purchases" button if available
-3. Contact support with their transaction ID
-   :::
-
-#### "Product not found" error when user tries to purchase
+#### "Product not found" error when trying to purchase
 
 **Checklist**:
 
-- [ ] Product exists and is approved in the correct store (Play/Apple)
-- [ ] Product ID in Admin Panel exactly matches store product ID
-- [ ] App is using the same package name (Android) or bundle ID (iOS) as configured in stores
-- [ ] For Android: App is signed with the correct key
-- [ ] Recent product changes have propagated (wait 1-2 hours)
-
-#### Purchase verification taking too long or timing out
-
-**Possible causes**:
-
-1. **Admin Panel Performance**: Server overloaded or slow database queries
-
-   - Solution: Optimize server resources, check database indexes
-
-2. **Store API Latency**: Google/Apple's verification APIs are slow
-
-   - Solution: Implement timeout handling and retry logic
-
-3. **Network Connectivity**: Poor connection between app, Admin Panel, or store APIs
-
-   - Solution: Show loading state, allow users to retry
-
-4. **Firebase Service Account Issues** (Android only): Invalid or expired credentials
-   - Solution: Regenerate and re-upload service account credentials
+- [ ] Product exists and is approved in the correct store (Play Console or App Store Connect)
+- [ ] Product ID in Admin Panel **exactly matches** the Product ID in the store (check for typos)
+- [ ] App package name (Android) or bundle ID (iOS) matches what's configured in stores
+- [ ] For Android: App is signed with the correct signing key
+- [ ] Recent product changes have had time to propagate (wait 1-2 hours)
 
 ### Platform-Specific Issues
 
@@ -300,43 +437,44 @@ Most IAP libraries have purchase restoration features. Users can try:
 
 **Common causes**:
 
-- App not published to any testing track
-- Testing account not added to license testing list
+- App not uploaded to any testing track
+- Your email not added to license testing list
 - Product not activated in Play Console
-- Wrong package name in app configuration
+- Wrong package name in app settings
 
-**Solution**:
+**How to fix**:
 
-1. Ensure app is in at least internal testing track
-2. Add test account to Play Console license testing
-3. Verify product status is "Active" in Play Console
+1. Make sure app is in at least Internal Testing track
+2. Add your email to Play Console license testing
+3. Check that product status is "Active" in Play Console
+4. Verify package name matches between app and Admin Panel
 
 #### iOS: "Cannot connect to iTunes Store"
 
 **Common causes**:
 
-- Not using a sandbox account for testing
-- Sandbox account signed in to production App Store
-- Product not submitted for review or approved
-- App not distributed via TestFlight
+- Not using a sandbox tester account
+- Signed in to regular App Store instead of sandbox
+- Product not submitted or approved
+- Not using TestFlight build
 
-**Solution**:
+**How to fix**:
 
-1. Sign out of production Apple ID completely
-2. Use TestFlight build, not local debug build
-3. When prompted, sign in with sandbox account
-4. Ensure products are "Ready to Submit" or approved
+1. Sign out of your regular Apple ID completely
+2. Use a TestFlight build, not a local development build
+3. When prompted during purchase, sign in with sandbox tester account
+4. Make sure products are "Ready to Submit" or approved in App Store Connect
 
 #### iOS: Shared Secret errors
 
 **Symptoms**: Purchases complete but verification fails
 
-**Solution**:
+**How to fix**:
 
-1. Go to App Store Connect → Apps → Your App → App Information
-2. Copy the App-Specific Shared Secret (not Master Shared Secret)
-3. Add to Admin Panel under iOS IAP settings
-4. Ensure no extra spaces or characters in the secret
+1. Go to App Store Connect → Your App → App Information
+2. Copy the **App-Specific Shared Secret** (not Master Shared Secret)
+3. Add it to Admin Panel under `Settings > In-App Settings`
+4. Make sure there are no extra spaces at the beginning or end
 
 ### Remove Ads Purchase
 
@@ -344,71 +482,66 @@ Most IAP libraries have purchase restoration features. Users can try:
 
 **Troubleshooting steps**:
 
-1. **Verify Purchase Verification Succeeded**: Check Admin Panel user account shows remove-ads entitlement
+1. **Check if purchase verified**: Look in Admin Panel to see if the user has the remove-ads entitlement
 
-2. **App Not Checking Entitlement**: App may not be querying remove-ads status correctly
+2. **App not checking status**: The app might not be checking if ads should be hidden
 
-   - Solution: Ensure app checks entitlement on startup and before showing ads
+   - Make sure the app checks remove-ads status when it starts and before showing ads
 
-3. **Entitlement Not Persisting**: User data not syncing correctly
+3. **User data not syncing**: User account data might not be up to date
 
-   - Solution: Force sync user data from Admin Panel or restore purchases
+   - Force sync user data from Admin Panel, or ask user to restore purchases
 
-4. **Cache Issues**: Old ad configuration cached
-   - Solution: Clear app cache/data and restart
-
-#### Remove Ads purchase not restoring on new device
-
-Non-consumable purchases (like Remove Ads) should be restorable:
-
-1. Ensure app implements purchase restoration
-2. User should use "Restore Purchases" option in app settings
-3. User must be signed in with the same Apple ID/Google account used for original purchase
+4. **Cached data**: Old settings might be cached
+   - Clear app cache/data and restart the app
 
 ### Coins and Consumables
 
 #### Can users request refunds for coin purchases?
 
-Yes, users can request refunds through their respective app stores:
+Yes, users can request refunds through the app stores:
 
-- **Google Play**: Users can request refund within 48 hours via Play Store app
-- **Apple App Store**: Users can request refund via reportaproblem.apple.com
+- **Google Play**: Users can request refund within 48 hours through the Play Store app
+- **Apple App Store**: Users can request refund at [reportaproblem.apple.com](https://reportaproblem.apple.com)
 
-:::warning
-When stores issue refunds:
+:::warning Handle Refunds
+When a store issues a refund:
 
 - You may receive a notification from the store
-- You should revoke the purchased coins from the user's account
-- Implement server-side refund handling to prevent abuse
+- You should remove the refunded coins from the user's account to prevent abuse
   :::
 
 #### How do I handle fraudulent purchases?
 
 **Prevention**:
 
-- Elite Quiz already implements server-side verification (good!)
-- Monitor for unusual purchase patterns (same user, many purchases, immediate refunds)
-- Implement rate limiting on purchases
+- Elite Quiz already uses server-side verification (this prevents most fraud)
+- Watch for unusual patterns (same user making many purchases then getting refunds)
+- Consider adding purchase rate limits
 
 **Detection**:
 
-- Review store refund notifications regularly
-- Check for users with negative coin balances (after refund)
-- Monitor Admin Panel logs for verification failures
+- Check store refund notifications regularly
+- Look for users with negative coin balances (happens after refunds)
+- Review Admin Panel logs for verification failures
 
 **Response**:
 
-- Deduct refunded coins from user accounts
-- Consider flagging or banning accounts with multiple fraudulent attempts
-- Report egregious abuse to app stores
+- Remove refunded coins from user accounts
+- Consider banning accounts with multiple fraudulent attempts
+- Report serious abuse to the app stores
 
 ---
 
 ## Still Having Issues?
 
-If you're experiencing IAP issues not covered here:
+If you're experiencing IAP problems not covered here:
 
 1. **Check Platform Documentation**: Review the [WRTeam Common IAP Documentation](https://wrteam-in.github.io/common_app_doc/GeneralSettings/iap)
 2. **Review Server Logs**: Check Admin Panel logs for verification errors
-3. **Test Methodically**: Isolate the issue (Android vs iOS, specific products, all users vs specific users)
-4. **Contact Support**: Provide detailed information including platform, product IDs, error messages, and server logs
+3. **Test Methodically**: Isolate the issue (Android vs iOS? Specific products? All users or just some?)
+4. **Contact Support**: Provide detailed information including:
+   - Platform (Android or iOS)
+   - Product IDs
+   - Error messages
+   - Server logs

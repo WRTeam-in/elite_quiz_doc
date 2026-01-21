@@ -8,53 +8,78 @@ This page documents the version history and updates for the Elite Quiz Mobile ap
 
 ## Compatibility Table
 
-| Product Version | Flutter version |
-| --------------- | --------------- |
-| v2.3.5          | v3.32.x         |
-| v2.3.4          | v3.32.x         |
-| v2.3.3          | v3.29.3         |
-| v2.3.2          | v3.29.3         |
-| v2.3.1          | v3.29.3         |
-| v2.2.6          | v3.27.1         |
-| v2.2.5          | v3.24.4         |
-| v2.2.4          | v3.24.3         |
-| v2.2.3          | v3.22.1         |
-| v2.2.2          | v3.22.1         |
-| v2.2.1          | v3.22.1         |
-| v2.2.0          | v3.22.1         |
-| v2.1.9          | v3.19.3         |
-| v2.1.8          | v3.19.3         |
-| v2.1.7          | v3.19.3         |
-| v2.1.6          | v3.19.3         |
-| v2.1.5          | v3.16.9         |
-| v2.1.4          | v3.16.9         |
-| v2.1.3          | v3.16.9         |
-| v2.1.2          | v3.16.9         |
-| v2.1.1          | v3.16.9         |
-| v2.1.0          | v3.16.9         |
-| v2.0.9.1        | v3.16.9         |
-| v2.0.9          | v3.16.9         |
-| v2.0.8          | v3.16.9         |
-| v2.0.7          | v3.7.7          |
-| v2.0.6          | v3.7.0          |
-| v2.0.5          | v3.0.2          |
-| v2.0.4          | v3.0.2          |
-| v2.0.3          | v3.0.2          |
-| v2.0.2          | v3.0.2          |
-| v2.0.1          | v3.0.2          |
-| v2.0.0          | v3.0.2          |
-| v1.0.9          | v2.5.0          |
-| v1.0.8          | v2.5.0          |
-| v1.0.7          | v2.5.0          |
-| v1.0.6          | v2.5.0          |
-| v1.0.5          | v2.5.0          |
-| v1.0.4          | v2.5.0          |
-| v1.0.3          | v2.5.0          |
-| v1.0.2          | v2.5.0          |
-| v1.0.1          | v2.5.0          |
-| v1.0.0          | v2.5.0          |
+<details>
+<summary><strong>Flutter Version Compatibility by App Version</strong></summary>
 
-## v2.3.5
+| Flutter Version | App Versions |
+| --------------- | ------------ |
+| **v3.38.x** | v2.3.7 |
+| **v3.35.x** | v2.3.6 |
+| **v3.32.x** | v2.3.5, v2.3.4 |
+| **v3.29.3** | v2.3.3, v2.3.2, v2.3.1 |
+| **v3.27.1** | v2.2.6 |
+| **v3.24.4** | v2.2.5 |
+| **v3.24.3** | v2.2.4 |
+| **v3.22.1** | v2.2.3, v2.2.2, v2.2.1, v2.2.0 |
+| **v3.19.3** | v2.1.9 – v2.1.6 |
+| **v3.16.9** | v2.1.5 – v2.0.8, v2.0.9.1 |
+| **v3.7.7** | v2.0.7 |
+| **v3.7.0** | v2.0.6 |
+| **v3.0.2** | v2.0.5 – v2.0.0 |
+| **v2.5.0** | v1.0.9 – v1.0.0 |
+
+</details>
+
+## v2.3.7 (25 November 2025 )
+
+```
+- Added: Collapsible leaderboard header for improved usability across Global and Contest leaderboards.
+- Added: Compatibility with the latest Flutter & Dart versions (Flutter 3.38.3, Dart 3.10.1).
+- Added: Count-up animation for Achievement stats on the Home screen.
+- Added: Staggered animations to Play Zone cards for a smoother, more dynamic visual flow.
+- Fixed: Downgraded http package to 1.3.0 for compatibility stability.
+- Fixed: Downgraded in_app_purchase to 3.2.1 to resolve iOS StoreKit 1 receipt validation issues.
+- Fixed: Downgraded just_audio to restore compatibility and sound issue.
+- Fixed: Force Update dialog behaviour now works correctly in all scenarios.
+- Fixed: Removed redundant animation triggers on the Quiz Result screen.
+- Improved: General code cleanup, minor UI refinements, and internal chore updates.
+- Improved: Modernised codebase — migrated multiple components to sealed classes and improved immutability for better maintainability.
+- Improved: Replaced scattered custom exceptions with a unified ApiException for consistent error handling.
+- Improved: Updated Guess The Word "Back" button behaviour for a cleaner and more intuitive UX.
+```
+
+## v2.3.6 ( 28 October 2025 )
+
+```
+- Added: AI Question Bank in the Admin Panel — auto-generate questions for five main quiz types using OpenAI or Gemini AI models.
+- Added: 16KB page alignment compatibility for Android.
+- Added: All third-party packages updated to their latest compatible versions.
+- Added: App Tracking Transparency support and upgraded packages for improved iOS compliance.
+- Added: Flutter upgraded to the latest stable version (v3.35.7).
+- Added: Full-width AdMob banner ads for better visibility and consistent layout.
+- Added: Improved Badges Screen with fresh animations and smoother UI transitions.
+- Added: IronSource Ads Provider integration for diversified ad monetization.
+- Added: Updated "Unlock" and "Not Enough Coins" dialogs for better clarity and UX.
+- Fixed: "Play with Bot" results now display correctly after battle completion.
+- Fixed: Android PDF viewer issue in Fun & Learn comprehension mode.
+- Fixed: Custom dialog UI issues involving text buttons.
+- Fixed: Dropdown duplicate value error and minor visual glitches.
+- Fixed: Matrix4 scaling function now correctly uses `scaleByDouble` parameters.
+- Fixed: Profile menu index misalignment when changing language or authentication state.
+- Fixed: Timezone handling bug for users in negative GMT regions.
+- Fixed: Username text overflow issue in the profile header.
+- Improved: Ad handling refactored with clearer ad type definitions for smoother future integrations.
+- Improved: Badge animations and screen transitions for a more dynamic feel.
+- Improved: Refactored core features for better architectural alignment, maintainability, and performance.
+- Improved: Removed precache assets to optimize memory usage and reduce startup time.
+- Improved: System configuration cleaned up — removed unused scoring and battle properties.
+- Improved: Utility classes, dialogs, and UI polished for cleaner code and a more consistent UX.
+
+Note: Please read the README.txt before proceeding with the update.
+Note: The AI Question Bank requires an active API key for OpenAI or Gemini. Configure your preferred model in the Admin Panel settings before generating questions.
+```
+
+## v2.3.5 ( 14 August 2025 )
 
 ```
 - Added: Coins and score are now Always visible on the result screen for better clarity.
@@ -99,12 +124,12 @@ Note: Please read the README.txt before proceeding with the update.
 ## v2.3.4 (17 July 2025)
 
 ```
-- Added: NEW bottom navigation bar for a cleaner and faster navigation experience.  
-- Added: Bumped dependencies to the latest versions.  
-- Added: Compatible with latest Flutter 3.32.6.  
-- Added: Coins, score, badges, and reward distribution are now fully handled from the backend for significant security improvement.  
-- Improved: Code structure, removed unused cubits, repositories, and cleaned up redundant logic.  
-- Improved: Added new SVG avatars for profile picture.  
+- Added: NEW bottom navigation bar for a cleaner and faster navigation experience.
+- Added: Bumped dependencies to the latest versions.
+- Added: Compatible with latest Flutter 3.32.6.
+- Added: Coins, score, badges, and reward distribution are now fully handled from the backend for significant security improvement.
+- Improved: Code structure, removed unused cubits, repositories, and cleaned up redundant logic.
+- Improved: Added new SVG avatars for profile picture.
 
 Note: Please read the README.txt before proceeding with the update.
 ```
