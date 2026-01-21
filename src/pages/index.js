@@ -4,6 +4,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
+import DocBanner from '../components/DocBanner';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -46,6 +47,7 @@ function QuickLinks() {
           </Link>
         </div>
       </div>
+      <DocBanner />
     </div>
   );
 }

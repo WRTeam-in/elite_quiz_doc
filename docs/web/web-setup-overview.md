@@ -2,6 +2,10 @@
 sidebar_position: 2
 ---
 
+import DocBanner from '@site/src/components/DocBanner';
+
+<DocBanner />
+
 # Web Setup Overview
 
 ### 1. Extract the Project Files

@@ -1,7 +1,9 @@
 ---
 sidebar_position: 2
 ---
+import DocBanner from '@site/src/components/DocBanner';
 
+<DocBanner />
 # Overview
 
 Elite Quiz is a comprehensive quiz platform that enables you to create, manage, and conduct interactive quizzes across multiple platforms. This overview provides a detailed look at the platform's capabilities, architecture, and key features.
