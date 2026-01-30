@@ -47,6 +47,10 @@ To change the application colors:
 
 ![Theme Colors](../../static/img/web/theme-color.webp)
 
+2. To change dark mode primary color
+
+![Dark Mode Primary Color](../../static/img/web/darkprimarycolor.png)
+
 ## Changing Application Font
 
 To change the application font:
@@ -55,6 +59,14 @@ To change the application font:
 2. You can get fonts from [Google Fonts](https://fonts.google.com/)
 
 ![Change Font](../../static/img/web/changeFont.png)
+
+## PWA Settings
+
+PWA is use for user can install your website as a app in mobile device or computer
+1. To change the PWA settings: Go to .env file
+
+
+![PWA Settings](../../static/img/web/pwa.png)
 
 ## Adding Slider on Homepage
 
