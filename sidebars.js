@@ -66,7 +66,6 @@ export default {
         'mobile/overview',
         'mobile/setup',
         'mobile/configuration',
-        'mobile/keystore',
         'mobile/firebase',
         'mobile/customization',
         {
@@ -74,6 +73,7 @@ export default {
           label: 'App Monetization',
           items: ['mobile/monetization', 'mobile/ads-configuration', 'mobile/in-app-purchases'],
         },
+        'mobile/notifications',
         'mobile/deployment',
         'mobile/update',
         'mobile/16kb-page-size',
