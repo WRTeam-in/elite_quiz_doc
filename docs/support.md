@@ -31,8 +31,8 @@ If you need additional help, our dedicated support team is available through mul
 
 #### Web Application Support
 
-- **Contact**: Jaydip Sodha
-- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAwXxMcrb86u2BHwE)
+- **Contact**: Mohan Dhila
+- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAUrbWj96fM1Fmjww?v=g1)
 - **Scope**: Web application setup, and issues
 
 #### Mobile App Support
