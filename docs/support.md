@@ -23,11 +23,12 @@ Before contacting support, please check our comprehensive documentation. You can
 
 If you need additional help, our dedicated support team is available through multiple channels:
 
-#### Admin Panel Support
 
-- **Contact**: Hemal Gondaliya
-- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAPvh1MHf8NYV3uAE)
-- **Scope**: Admin panel setup, configuration, and management
+#### Mobile App Support
+
+- **Contact**: Priyansh Parmar
+- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAog3ZODgiEtZhlQM)
+- **Scope**: Mobile app setup, features, and troubleshooting
 
 #### Web Application Support
 
@@ -35,11 +36,12 @@ If you need additional help, our dedicated support team is available through mul
 - **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAUrbWj96fM1Fmjww?v=g1)
 - **Scope**: Web application setup, and issues
 
-#### Mobile App Support
+#### Admin Panel Support
 
-- **Contact**: Priyansh Parmar
-- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAog3ZODgiEtZhlQM)
-- **Scope**: Mobile app setup, features, and troubleshooting
+- **Contact**: Hemal Gondaliya
+- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAPvh1MHf8NYV3uAE)
+- **Scope**: Admin panel setup, configuration, and management
+
 
 #### Email Support
 
