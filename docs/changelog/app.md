@@ -13,7 +13,7 @@ This page documents the version history and updates for the Elite Quiz Mobile ap
 
 | Flutter Version | App Versions |
 | --------------- | ------------ |
-| **v3.38.x** | v2.3.7 |
+| **v3.38.x** | v2.3.8, v2.3.7 |
 | **v3.35.x** | v2.3.6 |
 | **v3.32.x** | v2.3.5, v2.3.4 |
 | **v3.29.3** | v2.3.3, v2.3.2, v2.3.1 |
@@ -29,6 +29,15 @@ This page documents the version history and updates for the Elite Quiz Mobile ap
 | **v2.5.0** | v1.0.9 – v1.0.0 |
 
 </details>
+
+## v2.3.8 (30 January 2026)
+
+```
+- Added: Quizzing and Multi-Match section with optional category levels; quizzes can be played without level selection.
+- Added: Compatibility with latest Flutter & Dart versions (Flutter 3.38.8, Dart 3.10.7).
+- Fixed: Prevented screenshot or screen recording in the exam screen.
+- Improved: Responsiveness issues in the battle screen and exam key bottom sheet.
+```
 
 ## v2.3.7 (25 November 2025 )
 
