@@ -30,6 +30,13 @@ This page documents the version history and updates for the Elite Quiz Mobile ap
 
 </details>
 
+## v2.3.9 (31 March 2026)
+
+```
+- Added: Database and assets backup option in the admin panel.
+- Improved: General improvements and bug fixes.
+```
+
 ## v2.3.8 (30 January 2026)
 
 ```
