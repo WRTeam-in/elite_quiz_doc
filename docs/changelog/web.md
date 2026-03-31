@@ -8,7 +8,115 @@ This page documents the version history and updates for the Elite Quiz Web appli
 
 <div className="changelog-container">
 
+
 <details open>
+<summary><h2>Version 2.3.9 (31 Mar 2026)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> Added the database and assets backup option in the admin panel
+- <span className="badge badge--info">Improved</span> Improvements and bugfix
+</ul>
+</details>
+
+<details>
+<summary><h2>Version 2.3.8 (30 Jan 2026)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> Progressive Web App (PWA) integration for enhanced web app experience and offline support
+- <span className="badge badge--success">Added</span> Cookie integration to support compliance and improved session handling
+- <span className="badge badge--success">Added</span> Custom AdSense components to improve ad placement and overall user experience
+
+- <span className="badge badge--info">Improved</span> Level selection made optional in Quiz Zone and MultiMatch within category and subcategory flows
+- <span className="badge badge--info">Improved</span> Display of playable question counts on category and subcategory cards in Quiz Zone and MultiMatch
+- <span className="badge badge--info">Improved</span> Wallet page clarity with defined conversion rate between coins and currency
+- <span className="badge badge--info">Improved</span> Referral system messaging to clearly show coin rewards for both referrer and new users
+
+- <span className="badge badge--danger">Fixed</span> Wallet payout issues ensuring accurate and reliable transactions
+- <span className="badge badge--danger">Fixed</span> Leaderboard issues affecting ranking and data display
+- <span className="badge badge--danger">Fixed</span> UI issues on the Play Screen for mobile devices
+- <span className="badge badge--danger">Fixed</span> Core logic refactored to enhance error handling and overall code stability
+
+- <span className="badge badge--info">Refactored</span> Codebase improvements for better maintainability, performance, and consistent error management
+</ul>
+</details>
+
+<details>
+<summary><h2>Version 2.3.7 (25 Nov 2025)</h2></summary>
+<ul>
+- <span className="badge badge--danger">Fixed</span> Removed breadcrumb from single page views
+- <span className="badge badge--danger">Fixed</span> Corrected breadcrumb path for navigation
+- <span className="badge badge--danger">Fixed</span> UI alignment issues across components
+- <span className="badge badge--danger">Fixed</span> Random battle matchmaking issue in language-off mode
+- <span className="badge badge--danger">Fixed</span> Guess-the-word hint error with incomplete answers
+- <span className="badge badge--danger">Fixed</span> Header and footer alignment problems
+
+- <span className="badge badge--info">Improved</span> General code cleanup and optimization
+- <span className="badge badge--info">Improved</span> Minor UI refinements for consistency
+</ul>
+</details>
+
+<details>
+<summary><h2>Version 2.3.6 (28 Oct 2025)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> AI Question Bank in the Admin Panel — auto-generate questions for five main quiz types using OpenAI or Gemini AI models
+
+- <span className="badge badge--danger">Fixed</span> Header highlight issue for consistent UI feedback  
+- <span className="badge badge--danger">Fixed</span> “Previous” and “Next” button functionality in Exam Quiz section  
+- <span className="badge badge--danger">Fixed</span> Incorrect display of played exams in history view  
+- <span className="badge badge--danger">Fixed</span> One-vs-One Battle gameplay issue for smoother experience  
+
+- <span className="badge badge--info">Improved</span> Overall code structure and removed redundant logic  
+- <span className="badge badge--info">Improved</span> API response handling for enhanced performance and reliability  
+</ul>
+</details>
+
+<details>
+<summary><h2>Version 2.3.5 (14 Aug 2025)</h2></summary>
+<ul>
+- <span className="badge badge--danger">Fixed</span> Audio and Fun and Learn quiz review answer when user does not select any option  
+- <span className="badge badge--danger">Fixed</span> Enabled Join Battle button while user is connected and removed unnecessary restrictions  
+- <span className="badge badge--danger">Fixed</span> Added placeholder image when no category or subcategory image is available  
+- <span className="badge badge--danger">Fixed</span> Removed red line from timer during the last five seconds  
+- <span className="badge badge--danger">Fixed</span> Multi Match premium category issue  
+- <span className="badge badge--danger">Fixed</span> Alignment issue in profile  
+- <span className="badge badge--danger">Fixed</span> Correct question statistics when user does not click on any question  
+- <span className="badge badge--danger">Fixed</span> RTL (Right-to-Left language) display issues  
+
+- <span className="badge badge--warning">Removed</span> Popup confirmation on review page if user has already opted not to see it again  
+
+- <span className="badge badge--success">Added</span> Dashed lines in sequence questions to help users better understand the order  
+- <span className="badge badge--success">Added</span> Numerical badges for Group Battle rank  
+
+- <span className="badge badge--info">Improved</span> Code structure, removed unused parameters, polished UI, and enhanced reusability of utility functions  
+</ul>
+</details>
+
+<details>
+<summary><h2>Version 2.3.4 (17 Jul 2025)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> Coins, scores, badges, and reward distribution are now fully managed via the backend, enhancing security and integrity  
+- <span className="badge badge--success">Added</span> Breadcrumb navigation on relevant pages to improve user experience and navigation clarity  
+
+- <span className="badge badge--info">Improved</span> Dark mode theme for better visual consistency  
+- <span className="badge badge--info">Improved</span> Codebase structure with removal of unused code, repositories, and redundant logic for improved maintainability  
+</ul>
+</details>
+
+<details>
+<summary><h2>Version 2.3.3 (27 May 2025)</h2></summary>
+<ul>
+- <span className="badge badge--success">Added</span> Dark mode  
+- <span className="badge badge--success">Added</span> Web Push Notifications  
+- <span className="badge badge--success">Added</span> Load More button on category and subcategory pages  
+
+- <span className="badge badge--info">Improved</span> Implemented standard breadcrumb  
+- <span className="badge badge--info">Improved</span> Converted local images to match the primary color  
+- <span className="badge badge--info">Improved</span> Component skeletons  
+- <span className="badge badge--info">Improved</span> Made timer animation smoother  
+- <span className="badge badge--info">Improved</span> Placeholder image for missing images  
+- <span className="badge badge--info">Improved</span> Many bug fixes and performance enhancements  
+</ul>
+</details>
+
+<details>
 <summary><h2>Version 2.3.2 (12 Apr 2025)</h2></summary>
 <ul>
 - <span className="badge badge--success">Added</span> "Hint deduct coins" in Guess The Word setting rather than using the "lifeline deduct coins" from quiz zone setting
