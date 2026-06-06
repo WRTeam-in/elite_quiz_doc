@@ -28,12 +28,18 @@ export default {
     },
   },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        docsRouteBasePath: '/',
+        hashed: true,
+      },
+    ],
+  ],
 
-  // Add local search plugin with a unique ID to avoid conflicts
   plugins: [
-    require.resolve('@easyops-cn/docusaurus-search-local'),
-
     [
       '@docusaurus/plugin-google-gtag',
       {
