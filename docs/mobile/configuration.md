@@ -9,7 +9,7 @@ Upon successfully setting up Flutter and running your project, you can **customi
 
 ## Change the Package Name
 
-To update your application's package name, refer to our official guide provided here: [How to Change Package Name](https://wrteam-in.github.io/common_app_doc/GeneralSettings/packagename).
+To update your application's package name, refer to our official guide provided here: [How to Change Package Name](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/packagename).
 
 ## Change the Application Name
 
