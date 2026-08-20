@@ -38,7 +38,7 @@ You can set and manage your How to Play (instructions) content for the app:
 
 Use the **AI Settings** screen to connect your AI Question Bank to either Gemini or OpenAI. Entering the wrong model code or API key will break question generation, so double-check every field before you click **Submit**.
 
-![AI Settings](/img/panel/ai_setting.webp)
+![AI Settings](/img/panel/ai_setting.png)
 
 ### Step 1: Choose an AI Provider
 
