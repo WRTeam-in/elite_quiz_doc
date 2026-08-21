@@ -25,26 +25,29 @@ After installing the Elite Quiz Admin Panel, you'll need to configure it to matc
 
 1. **Create Firebase Database**:
 
-   ![Create Firebase Database](/img/panel/firebase_create_database.png)
+   ![Create Firebase Database](/img/panel/firebase_create_database.webp)
 
 2. **Select Database Location**:
 
-   ![Select Database Location](/img/panel/firebase_select_database_location.png)
+   ![Select Database Location](/img/panel/firebase_select_database_location.webp)
 
 3. **Set Up Battle Rules**:
 
-   ![Battle Rules](/img/panel/firebase_battle_rules.png)
+   ![Battle Rules](/img/panel/firebase_battle_rules.webp)
 
+4. **Configure Battle Index**:
 
-4. **Download Services JSON**:
+   ![Battle Index](/img/panel/firebase_battle_index.webp)
+
+5. **Download Services JSON**:
 
    ![Download Services JSON](/img/panel/download_services_json.webp)
 
-5. **Upload Services JSON**:
+6. **Upload Services JSON**:
 
-   ![Upload Services JSON](/img/panel/upload_services_json.png)
+   ![Upload Services JSON](/img/panel/upload_services_json.webp)
 
-6. **Verify Google Play Android Developer API is Enabled**:
+7. **Verify Google Play Android Developer API is Enabled**:
 
    ![Google Console Verify](/img/panel/google_console_verify_play_android_developer_api_is_enabled.webp)
 
@@ -52,7 +55,7 @@ After installing the Elite Quiz Admin Panel, you'll need to configure it to matc
 
 Configure authentication methods for your application:
 
-![Authentication Settings](/img/panel/authentication_settings.png)
+![Authentication Settings](/img/panel/authentication_settings.webp)
 
 ## Configuration Files
 
@@ -74,7 +77,7 @@ This section explains how to configure the Elite Quiz system settings for optima
 
 Change the Quiz name and logo in the Profile menu:
 
-![Profile Settings](/img/panel/profile.png)
+![Profile Settings](/img/panel/profile.webp)
 
 ## System Settings
 
@@ -95,7 +98,7 @@ From the System Configurations screen, you can set:
 - Shareapp Text
 - Fix Question in level
 
-![System Configurations](/img/panel/system-utilites.png)
+![System Configurations](/img/panel/system-configurations.webp)
 
 ### Configuration Settings Explained
 
@@ -127,7 +130,7 @@ From the System Configurations screen, you can set:
 
 Additionally, you can change quiz specific settings from System Utilities:
 
-![System Utilities 1](/img/panel/system_utilities_setting.png)
+![System Utilities 1](/img/panel/system_utilities.webp)
 
 - **Visible Mode:** Controls visibility of the feature. if you want to disable any particular quiz you can disable this option for that quiz.
 
@@ -139,7 +142,7 @@ Additionally, you can change quiz specific settings from System Utilities:
 
 - **Wrong Answer Deduct Score:** for each wrong answer this amount of score is deducted.
 
-![System Utilities 2](/img/panel/system_utilities_setting.png)
+![System Utilities 2](/img/panel/system_utilities.webp)
 
 - **Extra Scores:** given in battles, when user answers correctly and quickly, if user correctly answers in 2 seconds they get extra score from quickest answer score, and if they answer in 4 seconds they get extra score from second quickest answer score.
 
